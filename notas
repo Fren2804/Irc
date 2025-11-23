@@ -1,0 +1,32 @@
+nc 127.0.0.0 6667
+
+Pruebas \r\n
+
+socat - TCP:localhost:6667
+
+
+telnet localhost 6667
+Cambiar teclado a ingles hacer ^] y escribir QUIT
+
+
+copiar y pegar PASS 45
+
+printf "PASS 45\r\n" | nc localhost 6667
+
+
+
+
+
+Cliente tipo sserver para \r\n o \n solo
+
+
+Tengo que comprobar que ponga : en los mensajes
+
+
+Cosas raras al eliminar usuarios y desconectar no limpios los canales
+Parece que arreglado pero seguir echando un ojo a lo de kick
+
+El topic lo puede ver todo el mundo?
+
+
+Mirar codigos y mensajes de error
