@@ -62,10 +62,7 @@ void Parser::parser(Server::iteratorClient& itClient, const char *buffer)
     i = 0;
     if (tokens.size() < 1)
     {
-        //Comprobar nick o username
-        /*std::string reply = std::string(":server * :empty command") + "\r\n";
-        send(itClient->getFd(), reply.c_str(), reply.size(), 0);*/
-        _server.messageServerClient(itClient, "000", (*itClient)->getNickname(), "Empty command");
+        _server.messageServerClient(itClient, "421", (*itClient)->getNickname(), "Empty command");
         return ;
     }
     while (validCommands[i])
@@ -79,7 +76,7 @@ void Parser::parser(Server::iteratorClient& itClient, const char *buffer)
     }
     if (!validCommands[i])
     {
-        _server.messageServerClient(itClient, "000", (*itClient)->getNickname(), "Command not found");
+        _server.messageServerClient(itClient, "421", (*itClient)->getNickname(), "Unknown command");
     }
 }
 
@@ -90,25 +87,25 @@ void Parser::pass(Server::iteratorClient& itClient, const std::vector<std::strin
     
     if ((*itClient)->getLogged() == true)
     {
-        message = std::string("You are already logged");
-        code = "000";
+        message = std::string("You are already registered");
+        code = "462";
     }
     else if (tokens.size() < 2)
     {
-        message = std::string("Need a password");
-        code = "000";
+        message = std::string("Not enough parameters");
+        code = "461";
     }
     else if (tokens.size() > 2)
     {
-        message = std::string("Cannot have more than one argument");
-        code = "000";
+        message = std::string("Too many parameters");
+        code = "461";
     }
     else
     {
         if (tokens[1] != _server.getPassword())
         {
-            message = std::string("Incorrect password");
-            code = "000";
+            message = std::string("Password incorrect");
+            code = "464";
         }
         else
         {
@@ -131,31 +128,31 @@ void Parser::nick(Server::iteratorClient& itClient, const std::vector<std::strin
 
     if (!(*itClient)->getLogged())
     {
-        message = std::string("First introduce password");
-        code = "000";
+        message = std::string("First you must enter the password");
+        code = "451";
     }
     else if ((*itClient)->getNickname().size() > 0)
     {
         message = std::string("Your nick is already set");
-        code = "000";
+        code = "433";
     }
     else if (tokens.size() < 2)
     {
-        message = std::string("Need a nick");
-        code = "000";
+        message = std::string("No nickname given");
+        code = "431";
     }
     else if (tokens.size() > 2)
     {
-        message = std::string("Cannot have more than one argument");
-        code = "000";
+        message = std::string("Too many parameters");
+        code = "461";
     }
     else
     {
         Client *c = _server.getClientByNickname(tokens[1]);
         if (c)
         {
-            message = std::string("Nickname already in use ") + c->getNickname();
-            code = "000";
+            message = std::string("Nickname is already in use ") + c->getNickname();
+            code = "433";
         }
         else
         {
@@ -175,6 +172,7 @@ void Parser::nick(Server::iteratorClient& itClient, const std::vector<std::strin
         _server.messageServerClient(itClient, "001", (*itClient)->getNickname(), "Welcome to the IRC server");
     }
 }
+
 void Parser::user(Server::iteratorClient& itClient, const std::vector<std::string>& tokens)
 {
     std::string message;
@@ -182,34 +180,35 @@ void Parser::user(Server::iteratorClient& itClient, const std::vector<std::strin
 
     if (!(*itClient)->getLogged())
     {
-        message = std::string("First introduce password");
-        code = "000";
+        message = std::string("First you must enter the password");
+        code = "451";
     }
     else if ((*itClient)->getUsername().size() > 0)
     {
         message = std::string("Your username is already set");
+        code = "462";
     }
     else if (tokens.size() < 5)
     {
-        message = std::string("Need all parameters");
-        code = "000";
+        message = std::string("Not enough parameters");
+        code = "461";
     }
     else if (tokens.size() > 7)
     {
-        message = std::string("Cannot have more than 7 arguments");
-        code = "000";
+        message = std::string("Too many parameters");
+        code = "461";
     }
     else
     {
         if (tokens[4][0] != ':')
         {
             message = std::string("Missing : before username");
-            code = "000";
+            code = "461";
         }
         else if (tokens[4].size() < 2)
         {
             message = std::string("Username cannot be empty");
-            code = "000";
+            code = "461";
         }
         else
         {
@@ -240,6 +239,7 @@ void Parser::user(Server::iteratorClient& itClient, const std::vector<std::strin
         _server.messageServerClient(itClient, "001", (*itClient)->getNickname(), "Welcome to the IRC server");
     }
 }
+
 void Parser::join(Server::iteratorClient& itClient, const std::vector<std::string>& tokens)
 {
     std::string message;
@@ -252,13 +252,13 @@ void Parser::join(Server::iteratorClient& itClient, const std::vector<std::strin
     }
     else if (tokens.size() < 2)
     {
-        message = std::string("Need all parameters");
-        code = "000";
+        message = std::string("Not enough parameters");
+        code = "461";
     }
 	else if (tokens[1][0] != '#')
     {
         message = std::string("Channel must start with #");
-        code = "000";
+        code = "479";
     }
     else
     {
@@ -272,35 +272,34 @@ void Parser::join(Server::iteratorClient& itClient, const std::vector<std::strin
 		else if (c->getFlag() & FLAG_I)
 		{
 			message = std::string("Flag i set, you need an invitation for ") + c->getName();
-			code = "000";
+			code = "473";
 		}
 		else if (tokens.size() > 2 && !(c->getFlag() & FLAG_K))
 		{
-			message = std::string("Cannot have more than 1 argument");
-			code = "000";
+			message = std::string("Too many parameters");
+			code = "461";
 		}
 		else if (tokens.size() != 3 && (c->getFlag() & FLAG_K))
 		{
 			message = std::string("Flag k set, need password");
-			code = "000";
+			code = "475";
 		}
 		else if ((c->getFlag() & FLAG_K) && (c->getPassword() != tokens[2]))
 		{
-            std::cout << c->getPassword() << "|" << tokens[2] << std::endl;
 			message = std::string("Incorrect password");
-			code = "000";
+			code = "475";
 		}
         else
         {
             if (c->findUser((*itClient)))
             {
-                message = "You are already joined in channel " + c->getName();
-                code = "000";
+                message = "You are already on channel " + c->getName();
+                code = "004430";
             }
 			else if ((c->getFlag() & FLAG_L) && (c->getQuantityUsers() >= c->getLimitUsers()))
 			{
 				message = std::string("Not enough capacity in the channel, limit of users reached in ") + c->getName();
-				code = "000";
+				code = "471";
 			}
             else
             {
@@ -315,6 +314,7 @@ void Parser::join(Server::iteratorClient& itClient, const std::vector<std::strin
     }
     _server.messageServerClient(itClient, code, (*itClient)->getNickname(), message);
 }
+
 void Parser::part(Server::iteratorClient& itClient, const std::vector<std::string>& tokens)
 {
     std::string message;
@@ -327,8 +327,8 @@ void Parser::part(Server::iteratorClient& itClient, const std::vector<std::strin
     }
     else if (tokens.size() < 2)
     {
-        message = std::string("Need all parameters");
-        code = "000";
+        message = std::string("Not enough parameters");
+        code = "461";
     }
     else
     {
@@ -336,19 +336,19 @@ void Parser::part(Server::iteratorClient& itClient, const std::vector<std::strin
         if (!c)
         {
             message = std::string("This channel doesnt exist ") + tokens[1];
-            code = "000";
+            code = "403";
         }
         else
         {
             if (!c->findUser((*itClient)))
             {
                 message = std::string("You are not in the channel ") + tokens[1];
-                code = "000";
+                code = "442";
             }
             else if (tokens.size() > 2 && tokens[2][0] != ':')
             {
                 message = std::string("Format message incorrect start with -> :");
-                code = "000";
+                code = "461";
             }
             else
             {
@@ -374,6 +374,7 @@ void Parser::part(Server::iteratorClient& itClient, const std::vector<std::strin
     }
     _server.messageServerClient(itClient, code, (*itClient)->getNickname(), message);
 }
+
 void Parser::privmsg(Server::iteratorClient& itClient, const std::vector<std::string>& tokens)
 {
     std::string message;
@@ -386,13 +387,13 @@ void Parser::privmsg(Server::iteratorClient& itClient, const std::vector<std::st
     }
     else if (tokens.size() < 3)
     {
-        message = std::string("Need all parameters");
-        code = "000";
+        message = std::string("Not enough parameters");
+        code = "461";
     }
     else if (tokens[2][0] != ':')
     {
         message = std::string("Format message incorrect start with -> :");
-        code = "000";
+        code = "412";
     }
     else
     {
@@ -402,12 +403,12 @@ void Parser::privmsg(Server::iteratorClient& itClient, const std::vector<std::st
             if (!ch)
             {
                 message = std::string("This channel doesnt exist ") + tokens[1];
-                code = "000";
+                code = "403";
             }
 			else if (!ch->findUser((*itClient)))
 			{
-				message = std::string("You are not in this channel ") + tokens[1] ;
-				code = "000";
+				message = std::string("You are not in the channel ") + tokens[1] ;
+				code = "442";
 			}
             else
             {
@@ -430,7 +431,7 @@ void Parser::privmsg(Server::iteratorClient& itClient, const std::vector<std::st
             if (!cl)
             {
                 message = std::string("This nickname doesnt exist ") + tokens[1];
-                code = "000";
+                code = "401";
             }
             else
             {
@@ -450,24 +451,15 @@ void Parser::privmsg(Server::iteratorClient& itClient, const std::vector<std::st
     }
     _server.messageServerClient(itClient, code, (*itClient)->getNickname(), message);
 }
+
 void Parser::quit(Server::iteratorClient& itClient, const std::vector<std::string>& tokens)
 {
-    std::string message;
-    std::string code;
+    std::string message = "Goodbye";
+    std::string code = "000";
 
-    if (!(*itClient)->getComplete())
-    {
-        message = std::string("Goodbye");
-        code = "000";
-    }
-    else
+    if ((*itClient)->getComplete())
     {
         if (tokens.size() > 1 && tokens[1][0] != ':')
-        {
-            message = std::string("Format message incorrect start with -> :");
-            code = "000";
-        }
-        else
         {
             std::string messageUser = (" QUIT");
             if (tokens.size() > 1)
@@ -483,8 +475,6 @@ void Parser::quit(Server::iteratorClient& itClient, const std::vector<std::strin
 				}
             }
             _server.messageClientQuitChannels((*itClient), messageUser);
-			message = std::string("Goodbye");
-        	code = "000";
         }
     }
     _server.messageServerClient(itClient, code, (*itClient)->getNickname(), message);
@@ -503,7 +493,7 @@ void Parser::kick(Server::iteratorClient& itClient, const std::vector<std::strin
     }
     else if (tokens.size() < 4)
     {
-        message = std::string("Need all parameters");
+        message = std::string("Not enough parameters");
         code = "000";
     }
     else
@@ -573,7 +563,7 @@ void Parser::topic(Server::iteratorClient& itClient, const std::vector<std::stri
     }
     else if (tokens.size() < 2)
     {
-        message = std::string("Need all parameters");
+        message = std::string("Not enough parameters");
         code = "000";
     }
     else
@@ -656,7 +646,7 @@ void Parser::mode(Server::iteratorClient& itClient, const std::vector<std::strin
     }
     else if (tokens.size() < 3)
     {
-        message = std::string("Need all parameters");
+        message = std::string("Not enough parameters");
         code = "000";
     }
 	else if (tokens.size() > 5)
