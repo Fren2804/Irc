@@ -53,8 +53,12 @@ void Channel::removeUser(Client *c)
         {
             _users.erase(it);
             _quantityUsers --;
-            return ;
+            break ;
         }
+    }
+    if (_operators.empty() && !_users.empty())
+    {
+        this->setOperator(*_users.begin());
     }
 }
 
@@ -105,9 +109,9 @@ void Channel::setFlag(char flag)
     _flags = flag;
 }
 
-void Channel::setPassword(const std::string& topic)
+void Channel::setPassword(const std::string& password)
 {
-    _topic = topic;
+    _password = password;
 }
 
 void Channel::setQuantityUsers(unsigned int quantityUsers)

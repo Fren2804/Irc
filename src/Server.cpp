@@ -35,12 +35,22 @@ Server::Server(int port, const std::string &password): _port(port), _password(pa
     }
     Parser *parser = new Parser(*this);
     _parser = parser;
+    _jokes.push_back("Why don't scientists trust atoms? Because they make up everything.");
+    _jokes.push_back("Why did the scarecrow win an award? He was outstanding in his field.");
+    _jokes.push_back("Why don't skeletons fight each other? They don't have the guts.");
+    _jokes.push_back("Why did the bicycle fall over? Because it was two-tired.");
+    _jokes.push_back("What do you call fake spaghetti? An impasta.");
+    _jokes.push_back("Why couldn't the leopard play hide and seek? Because he was always spotted.");
+    _jokes.push_back("What do you call cheese that isn't yours? Nacho cheese.");
+    _jokes.push_back("Why did the math book look sad? It had too many problems.");
+    _jokes.push_back("Why don't eggs tell jokes? They'd crack each other up.");
+    _jokes.push_back("What do you call a bear with no teeth? A gummy bear.");
 }
 
 void Server::configSocket()
 {
-   _fd_socket = socket(AF_INET, SOCK_STREAM, 0);
-    if (_fd_socket < 0)
+   _fdSocket = socket(AF_INET, SOCK_STREAM, 0);
+    if (_fdSocket < 0)
     {
         perror("socket");
         (*_log).close();
@@ -48,10 +58,10 @@ void Server::configSocket()
     }
 
     int opt = 1;
-    if (setsockopt(_fd_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt)) < 0) {
+    if (setsockopt(_fdSocket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt)) < 0) {
         perror("setsockopt");
         (*_log).close();
-        close(_fd_socket);
+        close(_fdSocket);
         _exit(EXIT_FAILURE);
     }
 
@@ -60,35 +70,35 @@ void Server::configSocket()
     sockaddr_server.sin_port = htons(_port);
     sockaddr_server.sin_addr.s_addr = INADDR_ANY;
 
-    if (bind(_fd_socket, (struct sockaddr*) &sockaddr_server, sizeof(sockaddr_server)) < 0)
+    if (bind(_fdSocket, (struct sockaddr*) &sockaddr_server, sizeof(sockaddr_server)) < 0)
     {
         perror("bind");
         (*_log).close();
-        close(_fd_socket);
+        close(_fdSocket);
         _exit(EXIT_FAILURE);
     }
 
-    if (listen(_fd_socket, 10) < 0)
+    if (listen(_fdSocket, 10) < 0)
     {
         perror("listen");
         (*_log).close();
-        close(_fd_socket);
+        close(_fdSocket);
         _exit(EXIT_FAILURE);
     }
 
-    if (nonBlock(_fd_socket))
+    if (nonBlock(_fdSocket))
     {
         perror("fcntl");
         (*_log).close();
-        close(_fd_socket);
+        close(_fdSocket);
         _exit(EXIT_FAILURE);
     }
 
-    struct pollfd pollfd_socket;
-    pollfd_socket.fd =_fd_socket;
-    pollfd_socket.events = POLLIN;
-    pollfd_socket.revents = 0;
-    _fds.push_back(pollfd_socket);
+    struct pollfd pollfdSocket;
+    pollfdSocket.fd =_fdSocket;
+    pollfdSocket.events = POLLIN;
+    pollfdSocket.revents = 0;
+    _fds.push_back(pollfdSocket);
 }
 
 int Server::nonBlock(int fd)
@@ -109,7 +119,7 @@ void Server::running(int *g_running)
         for (size_t i = 0; i < _fds.size(); i ++)
         {
             //Esto indica nuevo cliente
-            if ((_fds[i].fd == _fd_socket) && (_fds[i].revents & POLLIN))
+            if ((_fds[i].fd == _fdSocket) && (_fds[i].revents & POLLIN))
             {
                 newClientConnected();
             }
@@ -130,28 +140,28 @@ void Server::running(int *g_running)
 
 void Server::newClientConnected()
 {
-    int fd_client;
+    int fdCliente;
     struct sockaddr_in client_addr;
     socklen_t len = sizeof(client_addr);
-    if ((fd_client = accept(_fd_socket, (struct sockaddr*)&client_addr, &len)) < 0)
+    if ((fdCliente = accept(_fdSocket, (struct sockaddr*)&client_addr, &len)) < 0)
     {
         perror("accept client");
         return ;
     }
     std::string ipClient = inet_ntoa(client_addr.sin_addr);
     messageLog(_idClient, "New client connected: ", (char *) ipClient.c_str());
-    if (nonBlock(_fd_socket))
+    if (nonBlock(_fdSocket))
     {
         perror("fcntl client");
-        close(fd_client);
+        close(fdCliente);
         return ;
     }
     struct pollfd pollfd_new_client;
-    pollfd_new_client.fd = fd_client;
+    pollfd_new_client.fd = fdCliente;
     pollfd_new_client.events = POLLIN | POLLHUP;
     pollfd_new_client.revents = 0;
     _fds.push_back(pollfd_new_client);
-    Client *newClient = new Client(fd_client, _idClient);
+    Client *newClient = new Client(fdCliente, _idClient);
     _clients.push_back(newClient);
     messageOutput(newClient->getId(), "Cliente conected", (char *)"");
     _idClient ++;
@@ -169,56 +179,58 @@ void Server::errorClientDisconnected(int i)
 void Server::waitClient(int i)
 {
     char buffer[1024];
-    ssize_t len_recv;
-    int fd_client;
-    fd_client = _fds[i].fd;
-    iteratorClient it = _searchClientFd(fd_client);
-    len_recv = recv(fd_client, buffer, sizeof(buffer) - 1, 0);
-    if (len_recv <= 0)
+    ssize_t lenRecv;
+    int fdCliente = _fds[i].fd;
+    iteratorClient it = _searchClientFd(fdCliente);
+
+    lenRecv = recv(fdCliente, buffer, sizeof(buffer) - 1, 0);
+    if (lenRecv <= 0)
     {
-        messageOutput(it, "Client disconected", (char *)"");
-        messageLog(it, "Client disconected", (char *)"");
-        closeConexion(fd_client);
+        messageOutput(it, "Client disconected", "");
+        messageLog(it, "Client disconected", "");
+        closeConexion(fdCliente);
+        return;
+    }
+
+    if ((*it)->getFileMode())
+    {
+        size_t pending = (*it)->getBytesPending();
+        Client *receiver = (*it)->getReceiver();
+        size_t bytesToProcess = std::min((size_t)lenRecv, pending);
+        send(receiver->getFd(), buffer, bytesToProcess, 0);
+        pending -= bytesToProcess;
+        (*it)->setBytesPending(pending);
+        if (pending == 0)
+        {
+            (*it)->setFileMode(false);
+            messageServerClient(it, "200", (*it)->getNickname(), "File transfer complete");
+
+            std::string messageReceiver;
+            messageReceiver = "\n:server " + receiver->getNickname() + " :Send file " + (*it)->getFilename() + "\r\n";
+            send(receiver->getFd(), messageReceiver.c_str(), messageReceiver.size(), 0);
+        }
         return ;
     }
-    //Temporal suyo simplemente buffer[len_recv] = '\0';
-    //std::cout << len_recv << std::endl;
-    buffer[len_recv] = '\0';
-    if (len_recv < 2)
+
+    std::string bufferClient = (*it)->getBuffer();
+    bufferClient.append(buffer, lenRecv);
+    size_t pos;
+    while ((pos = bufferClient.find('\n')) != std::string::npos)
     {
-        if (buffer[len_recv - 1] == '\n')
+        std::string line = bufferClient.substr(0, pos);
+
+        if (!line.empty() && line[line.size() - 1] == '\r')
         {
-            buffer[len_recv - 1] = '\0';
+            line.erase(line.size() - 1);
         }
+        bufferClient.erase(0, pos + 1);
+
+        messageOutput(it, "Message client:", line.c_str());
+        messageLog(it, "Message client:", line.c_str());
+
+        _parser->parser(it, line.c_str());
     }
-    else
-    {
-        if (buffer[len_recv - 2] == '\r')
-        {
-            (*it)->setConnection(true);
-            buffer[len_recv - 1] = '\0';
-        }
-        else if (buffer[len_recv - 1] == '\n')
-        {
-            buffer[len_recv - 1] = '\0';
-        }
-    }
-
-    //Temporal
-    /*for (ssize_t i = 0; buffer[i] != '\0'; i ++)
-    {
-        printf("%d\n", buffer[i]);
-    }*/
-
-    messageOutput(it, "Message client: ", buffer);
-    messageLog(it, "Message client: ", buffer);
-
-    _parser->parser(it, buffer);
-
-    //Temporal
-    //Temporal std::string reply = std::string("Servidor recibió: ") + buffer + "\r\n"; quitar \n
-    //std::string reply = std::string("Servidor recibió: ") + buffer + "\r\n";
-    //send(_fds[i].fd, reply.c_str(), reply.size(), 0);
+    (*it)->setBuffer(bufferClient);
 }
 
 
@@ -232,16 +244,23 @@ Server::iteratorClient Server::_searchClientFd(int fd)
     return (_clients.end());
 }
 
-void Server::closeConexion(int fd_client)
+void Server::closeConexion(int fdCliente)
 {
-    iteratorClient itClient = _searchClientFd(fd_client);
-    close(fd_client);
+    iteratorClient itClient = _searchClientFd(fdCliente);
+    close(fdCliente);
     for (iteratorPDF it = _fds.begin(); it != _fds.end(); ++it)
     {
-        if (it->fd == fd_client)
+        if (it->fd == fdCliente)
         {
             _fds.erase(it);
             break ;
+        }
+    }
+    for (iteratorChannel it = _channels.begin(); it != _channels.end(); ++ it)
+    {
+        if (it->second.findUser(*itClient))
+        {
+            it->second.removeUser(*itClient);
         }
     }
     delete *itClient;
@@ -274,14 +293,7 @@ void Server::messageServerClient(iteratorClient& itClient, const std::string& co
     {
         reply = reply + "* :";
     }
-    if ((*itClient)->getConnection())
-    {
-        reply = reply + message + "\r\n";
-    }
-    else
-    {
-        reply = reply + message + "\n";
-    }
+    reply = reply + message + "\r\n";
     send((*itClient)->getFd(), reply.c_str(), reply.size(), 0);
 }
 
@@ -297,14 +309,7 @@ void Server::messageServerClientTopic(iteratorClient& itClient, const std::strin
     {
         reply = reply + cod + " ";
     }
-    if ((*itClient)->getConnection())
-    {
-        reply = reply + message + "\r\n";
-    }
-    else
-    {
-        reply = reply + message + "\n";
-    }
+    reply = reply + message + "\r\n";
     send((*itClient)->getFd(), reply.c_str(), reply.size(), 0);
 }
 
@@ -322,40 +327,19 @@ void Server::messageServerJoinChannel(std::vector<Client*> users, Client *newCli
             reply = reply + " ";
         }
     }
-    if (newClient->getConnection())
-    {
-        reply = reply + "\r\n";
-    }
-    else
-    {
-        reply = reply + "\n";
-    }
+    reply = reply + "\r\n";
     send(newClient->getFd(), reply.c_str(), reply.size(), 0);
 
     reply = (":server ");
     reply = reply + "366 " + newClient->getNickname() + " " + channelName + " :End of /NAMES list.";
-    if (newClient->getConnection())
-    {
-        reply = reply + "\r\n";
-    }
-    else
-    {
-        reply = reply + "\n";
-    }
+    reply = reply + "\r\n";
     send(newClient->getFd(), reply.c_str(), reply.size(), 0);
 }
 
 void Server::messageClientClient(Client *receiver, Client *transmitter, const std::string& messagePartOne, const std::string& messagePartTwo)
 {
     std::string reply = (":") + transmitter->getPrefix() + messagePartOne + messagePartTwo;
-    if (receiver->getConnection())
-    {
-        reply = reply + "\r\n";
-    }
-    else
-    {
-        reply = reply + "\n";
-    }
+    reply = reply + "\r\n";
     send(receiver->getFd(), reply.c_str(), reply.size(), 0);
 }
 
@@ -391,7 +375,7 @@ void Server::messageClientQuitChannels(Client *transmitter, const std::string& m
 }
 
 
-void Server::messageLog(int id, std::string message, char* buffer)
+void Server::messageLog(int id, const std::string& message, const char* buffer)
 {
     std::time_t now = std::time(NULL);
     std::tm* tm_now = std::localtime(&now);
@@ -402,7 +386,7 @@ void Server::messageLog(int id, std::string message, char* buffer)
 }
 
 
-void Server::messageOutput(int id, std::string message, char* buffer)
+void Server::messageOutput(int id, const std::string& message, const char* buffer)
 {
     std::time_t now = std::time(NULL);
     std::tm* tm_now = std::localtime(&now);
@@ -412,7 +396,7 @@ void Server::messageOutput(int id, std::string message, char* buffer)
     std::cout << "[" << timeBuf << "] " << id << " - " << message << buffer << std::endl;
 }
 
-void Server::messageLog(iteratorClient &it, std::string message, char* buffer)
+void Server::messageLog(iteratorClient &it, const std::string& message, const char* buffer)
 {
     std::time_t now = std::time(NULL);
     std::tm* tm_now = std::localtime(&now);
@@ -432,7 +416,7 @@ void Server::messageLog(iteratorClient &it, std::string message, char* buffer)
 }
 
 
-void Server::messageOutput(iteratorClient &it, std::string message, char* buffer)
+void Server::messageOutput(iteratorClient &it, const std::string& message, const char* buffer)
 {
     std::time_t now = std::time(NULL);
     std::tm* tm_now = std::localtime(&now);
@@ -452,6 +436,50 @@ void Server::messageOutput(iteratorClient &it, std::string message, char* buffer
 
     std::cout << "[" << timeBuf << "] " << prefix << " - " << message << buffer << std::endl;
 }
+
+void Server::messageBot(iteratorClient& itClient, const std::string &param)
+{
+    std::string reply;
+
+    if (param == "help")
+    {
+        reply = "!HELP\nPASS <password>\n\tAuthenticate with the server. Must be used before NICK/USER.\n"
+                "\nNICK <nickname>\n\tSet or change your nickname. Must be unique on the server.\n"
+                "\nUSER <username> 0 * :<realname>\n\tRegister your username and real name. Required to complete login.\n"
+                "\nJOIN <#channel>\n\tJoin or create a channel. You will start receiving messages from it.\n"
+                "\nPART <#channel> :<optional!message>\n\tLeave a channel.\n"
+                "\nPRIVMSG <target> :<message>\n\tSend a private message to a user or channel.\n"
+                "\nQUIT :<optional!message>\n\tDisconnect from the server with an optional message.\n"
+                "\nTOPIC <#channel> :<toSet!topic>\n\tSet or view the topic of a channel.\n"
+                "\nKICK <#channel> <user> :<reason>\n\tRemove a user from a channel (requires operator privileges).\n"
+                "\nMODE <target> <mode>\n\tChange channel or user modes (depends on your implementation).\n"
+                "\nBOT <help|users|channels|joke>\n\tInteract with the built-in server bot. Examples:\n\t\tBOT help      → shows bot commands"
+                "\n\t\tBOT users     → lists online users\n\t\tBOT channels  → lists available channels\n\t\tBOT joke      → a random joke\n"
+                "\nFILE <nick> <filename> <size>\n\tStart a file transfer to another user.\n\tAfter this command, send the raw file bytes.";
+    }
+    else if (param == "users")
+    {
+        for (iteratorClient it = _clients.begin(); it != _clients.end(); ++it)
+        {
+            reply += (*it)->getNickname() + " ";
+        }
+    }
+    else if (param == "channels")
+    {
+        for (iteratorChannel it = _channels.begin(); it != _channels.end(); ++it)
+        {
+            reply += it->first + " ";
+        }
+    }
+    else
+    {
+        srand(time(NULL));
+        int joke = rand() % 10;
+        reply = _jokes[joke];
+    }
+    messageServerClient(itClient, "000", (*itClient)->getNickname(), reply);
+}
+
 
 void Server::createChannel(iteratorClient& itClient, const std::string& name)
 {
@@ -506,6 +534,14 @@ Channel* Server::getChannelByName(const std::string& name)
         return (&it->second);
     }
     return (NULL);
+}
+
+void Server::setFileTransfer(Client* transmitter, Client* receiver, const std::string& filename, std::size_t size)
+{
+    transmitter->setFileMode(true);
+    transmitter->setReceiver(receiver);
+    transmitter->setFilename(filename);
+    transmitter->setBytesPending(size);
 }
 
 const std::string& Server::getPassword()

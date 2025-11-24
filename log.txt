@@ -1,0 +1,1063 @@
+[2025-11-23 13:54:46] 1 - New client connected: 127.0.0.1
+[2025-11-23 13:54:48] 1 - Message client: 
+[2025-11-23 13:54:49] 1 - Client disconected
+[2025-11-23 13:59:29] 2 - New client connected: 127.0.0.1
+[2025-11-23 13:59:29] 2 - Message client: 
+[2025-11-23 13:59:30] 2 - Message client: PAss
+[2025-11-23 13:59:31] 2 - Message client: PASS 
+[2025-11-23 14:00:01] 3 - New client connected: 127.0.0.1
+[2025-11-23 14:00:01] 3 - Message client: 
+[2025-11-23 14:00:02] 3 - Message client: PAss
+[2025-11-23 14:00:03] 3 - Message client: USER ClienteTest
+[2025-11-23 14:00:04] 3 - Message client: NICK ClienteTest
+[2025-11-23 14:00:05] 3 - Message client: USER ClienteTest * * ClienteTest
+[2025-11-23 14:00:06] 3 - Message client: USER ClienteTest * * :ClienteTest
+[2025-11-23 14:00:07] 3 - Message client: JOIN #roma
+[2025-11-23 14:00:08] 3 - Message client: KICK
+[2025-11-23 14:00:09] 3 - Message client: PART
+[2025-11-23 14:00:10] 3 - Message client: PRIVMSG
+[2025-11-23 14:00:11] 3 - Message client: TOPIC
+[2025-11-23 14:00:12] 3 - Message client: MODE
+[2025-11-23 14:00:13] 3 - Message client: QUIT :adios
+[2025-11-23 14:00:13] 3 - Client disconected
+[2025-11-23 14:01:10] 4 - New client connected: 127.0.0.1
+[2025-11-23 14:01:10] 4 - Message client: 
+[2025-11-23 14:01:11] 4 - Message client: PAss
+[2025-11-23 14:01:12] 4 - Message client: USER ClienteTest
+[2025-11-23 14:01:13] 4 - Message client: NICK ClienteTest
+[2025-11-23 14:01:14] 4 - Message client: USER ClienteTest * * ClienteTest
+[2025-11-23 14:01:15] 4 - Message client: USER ClienteTest * * :ClienteTest
+[2025-11-23 14:01:16] 4 - Message client: JOIN #roma
+[2025-11-23 14:01:17] 4 - Message client: KICK
+[2025-11-23 14:01:18] 4 - Message client: PART
+[2025-11-23 14:01:19] 4 - Message client: PRIVMSG
+[2025-11-23 14:01:20] 4 - Message client: TOPIC
+[2025-11-23 14:01:21] 4 - Message client: MODE
+[2025-11-23 14:01:23] 4 - Message client: no se que poner esto es una prueba
+[2025-11-23 14:01:24] 4 - Message client: PASS 23 45
+[2025-11-23 14:02:01] 5 - New client connected: 127.0.0.1
+[2025-11-23 14:02:01] 5 - Message client: 
+[2025-11-23 14:02:02] 5 - Message client: PAss
+[2025-11-23 14:02:03] 5 - Message client: USER ClienteTest
+[2025-11-23 14:02:04] 5 - Message client: NICK ClienteTest
+[2025-11-23 14:02:05] 5 - Message client: USER ClienteTest * * ClienteTest
+[2025-11-23 14:02:06] 5 - Message client: USER ClienteTest * * :ClienteTest
+[2025-11-23 14:02:07] 5 - Message client: JOIN #roma
+[2025-11-23 14:02:08] 5 - Message client: KICK
+[2025-11-23 14:02:09] 5 - Message client: PART
+[2025-11-23 14:02:10] 5 - Message client: PRIVMSG
+[2025-11-23 14:02:11] 5 - Message client: TOPIC
+[2025-11-23 14:02:12] 5 - Message client: MODE
+[2025-11-23 14:02:13] 5 - Message client: no se que poner esto es una prueba
+[2025-11-23 14:02:14] 5 - Message client: PASS 23 45
+[2025-11-23 14:02:40] 6 - New client connected: 127.0.0.1
+[2025-11-23 14:02:40] 6 - Message client: 
+[2025-11-23 14:02:41] 6 - Message client: PAss
+[2025-11-23 14:02:42] 6 - Message client: USER ClienteTest
+[2025-11-23 14:02:43] 6 - Message client: NICK ClienteTest
+[2025-11-23 14:02:44] 6 - Message client: USER ClienteTest * * ClienteTest
+[2025-11-23 14:02:45] 6 - Message client: USER ClienteTest * * :ClienteTest
+[2025-11-23 14:02:46] 6 - Message client: JOIN #roma
+[2025-11-23 14:02:47] 6 - Message client: KICK
+[2025-11-23 14:02:48] 6 - Message client: PART
+[2025-11-23 14:02:49] 6 - Message client: PRIVMSG
+[2025-11-23 14:02:50] 6 - Message client: TOPIC
+[2025-11-23 14:02:51] 6 - Message client: MODE
+[2025-11-23 14:02:52] 6 - Message client: no se que poner esto es una prueba
+[2025-11-23 14:02:53] 6 - Message client: PASS 24
+[2025-11-23 14:10:58] 7 - New client connected: 127.0.0.1
+[2025-11-23 14:10:58] 7 - Message client: 
+[2025-11-23 14:10:59] 7 - Message client: PAss
+[2025-11-23 14:11:00] 7 - Message client: USER ClienteTest
+[2025-11-23 14:11:01] 7 - Message client: NICK ClienteTest
+[2025-11-23 14:11:02] 7 - Message client: USER ClienteTest * * ClienteTest
+[2025-11-23 14:11:03] 7 - Message client: USER ClienteTest * * :ClienteTest
+[2025-11-23 14:11:04] 7 - Message client: JOIN #roma
+[2025-11-23 14:11:05] 7 - Message client: KICK
+[2025-11-23 14:11:06] 7 - Message client: PART
+[2025-11-23 14:11:07] 7 - Message client: PRIVMSG
+[2025-11-23 14:11:08] 7 - Message client: TOPIC
+[2025-11-23 14:11:09] 7 - Message client: MODE
+[2025-11-23 14:11:10] 7 - Message client: no se que poner esto es una prueba
+[2025-11-23 14:11:11] 7 - Message client: PASS 23
+[2025-11-23 14:11:12] 7 - Message client: PASS 24
+[2025-11-23 14:11:13] 7 - Message client: PASS 23
+[2025-11-23 14:11:14] 7 - Message client: No se que poner
+[2025-11-23 14:11:15] 7 - Message client: JOIN #roma
+[2025-11-23 14:11:16] 7 - Message client: KICK
+[2025-11-23 14:11:17] 7 - Message client: PART
+[2025-11-23 14:11:18] 7 - Message client: PRIVMSG
+[2025-11-23 14:11:19] 7 - Message client: TOPIC
+[2025-11-23 14:11:20] 7 - Message client: MODE
+[2025-11-23 14:11:25] 7 - Client disconected
+[2025-11-23 14:17:21] 1 - New client connected: 127.0.0.1
+[2025-11-23 14:17:21] 1 - Message client: 
+[2025-11-23 14:17:22] 1 - Message client: PAss
+[2025-11-23 14:17:23] 1 - Message client: USER ClienteTest
+[2025-11-23 14:17:24] 1 - Message client: NICK ClienteTest
+[2025-11-23 14:17:25] 1 - Message client: USER ClienteTest * * ClienteTest
+[2025-11-23 14:17:26] 1 - Message client: USER ClienteTest * * :ClienteTest
+[2025-11-23 14:17:27] 1 - Message client: JOIN #roma
+[2025-11-23 14:17:28] 1 - Message client: KICK
+[2025-11-23 14:17:29] 1 - Message client: PART
+[2025-11-23 14:17:31] 1 - Message client: PRIVMSG
+[2025-11-23 14:17:32] 1 - Message client: TOPIC
+[2025-11-23 14:17:33] 1 - Message client: MODE
+[2025-11-23 14:17:34] 1 - Message client: no se que poner esto es una prueba
+[2025-11-23 14:17:35] 1 - Message client: PASS 23
+[2025-11-23 14:17:36] 1 - Message client: PASS 24
+[2025-11-23 14:17:37] 1 - Message client: PASS 23
+[2025-11-23 14:17:38] 1 - Message client: No se que poner
+[2025-11-23 14:17:39] 1 - Message client: JOIN #roma
+[2025-11-23 14:17:40] 1 - Message client: KICK
+[2025-11-23 14:17:41] 1 - Message client: PART
+[2025-11-23 14:17:42] 1 - Message client: PRIVMSG
+[2025-11-23 14:17:43] 1 - Message client: TOPIC
+[2025-11-23 14:17:44] 1 - Message client: MODE
+[2025-11-23 14:17:45] 1 - Message client: USER
+[2025-11-23 14:17:46] 1 - Message client: NICK
+[2025-11-23 14:17:47] 1 - Message client: NICK ClienteTest ClienteTest
+[2025-11-23 14:17:48] 1 - Message client: NICK ClienteTest
+[2025-11-23 14:17:49] 1 - Message client: JOIN #roma
+[2025-11-23 14:17:50] 1 - Message client: NICK ClienteTest
+[2025-11-23 14:17:51] 1 - Message client: USER * * *
+[2025-11-23 14:17:52] 1 - Message client: USER ClienteTest * * ClienteTest ClienteTest
+[2025-11-23 14:17:53] 1 - Message client: USER ClienteTest * * :ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest
+[2025-11-23 14:17:54] 1 - Message client: USER ClienteTest * * :
+[2025-11-23 14:17:55] 1 - Message client: USER ClienteTest * * :ClienteTest ClienteTest
+[2025-11-23 14:25:25] ClienteTest!ClienteTest@host - Client disconected
+[2025-11-23 14:25:32] 2 - New client connected: 127.0.0.1
+[2025-11-23 14:25:32] 2 - Message client: PASS 23
+[2025-11-23 14:25:33] 2 - Message client: NICK ADMIN
+[2025-11-23 14:25:34] 2 - Message client: USER ADMIN 0 * :ADMIN
+[2025-11-23 14:25:35] ADMIN!ADMIN@host - Message client: JOIN #madrid
+[2025-11-23 14:25:36] ADMIN!ADMIN@host - Message client: JOIN #berlin
+[2025-11-23 14:25:37] ADMIN!ADMIN@host - Message client: MODE #berlin +i
+[2025-11-23 14:25:38] ADMIN!ADMIN@host - Message client: MODE #madrid +l 2
+[2025-11-23 14:26:15] 3 - New client connected: 127.0.0.1
+[2025-11-23 14:26:15] 3 - Message client: 
+[2025-11-23 14:26:16] 3 - Message client: PAss
+[2025-11-23 14:26:17] 3 - Message client: USER ClienteTest
+[2025-11-23 14:26:18] 3 - Message client: NICK ClienteTest
+[2025-11-23 14:26:19] 3 - Message client: USER ClienteTest * * ClienteTest
+[2025-11-23 14:26:20] 3 - Message client: USER ClienteTest * * :ClienteTest
+[2025-11-23 14:26:21] 3 - Message client: JOIN #roma
+[2025-11-23 14:26:22] 3 - Message client: KICK
+[2025-11-23 14:26:23] 3 - Message client: PART
+[2025-11-23 14:26:24] 3 - Message client: PRIVMSG
+[2025-11-23 14:26:26] 3 - Message client: TOPIC
+[2025-11-23 14:26:27] 3 - Message client: MODE
+[2025-11-23 14:26:28] 3 - Message client: no se que poner esto es una prueba
+[2025-11-23 14:26:29] 3 - Message client: PASS 23
+[2025-11-23 14:26:30] 3 - Message client: PASS 24
+[2025-11-23 14:26:31] 3 - Message client: PASS 23
+[2025-11-23 14:26:32] 3 - Message client: No se que poner
+[2025-11-23 14:26:33] 3 - Message client: JOIN #roma
+[2025-11-23 14:26:34] 3 - Message client: KICK
+[2025-11-23 14:26:35] 3 - Message client: PART
+[2025-11-23 14:26:36] 3 - Message client: PRIVMSG
+[2025-11-23 14:26:37] 3 - Message client: TOPIC
+[2025-11-23 14:26:38] 3 - Message client: MODE
+[2025-11-23 14:26:39] 3 - Message client: USER
+[2025-11-23 14:26:40] 3 - Message client: NICK
+[2025-11-23 14:26:41] 3 - Message client: NICK ClienteTest ClienteTest
+[2025-11-23 14:26:42] 3 - Message client: NICK ClienteTest
+[2025-11-23 14:26:43] 3 - Message client: JOIN #roma
+[2025-11-23 14:26:44] 3 - Message client: NICK ClienteTest
+[2025-11-23 14:26:45] 3 - Message client: USER * * *
+[2025-11-23 14:26:46] 3 - Message client: USER ClienteTest * * ClienteTest ClienteTest
+[2025-11-23 14:26:47] 3 - Message client: USER ClienteTest * * :ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest
+[2025-11-23 14:26:48] 3 - Message client: USER ClienteTest * * :
+[2025-11-23 14:26:49] 3 - Message client: USER ClienteTest * * :ClienteTest ClienteTest
+[2025-11-23 14:26:50] ClienteTest!ClienteTest@host - Message client: JOIN
+[2025-11-23 14:26:51] ClienteTest!ClienteTest@host - Message client: JOIN roma
+[2025-11-23 14:26:52] ClienteTest!ClienteTest@host - Message client: JOIN #roma #roma
+[2025-11-23 14:26:53] ClienteTest!ClienteTest@host - Message client: JOIN #roma
+[2025-11-23 14:27:28] ClienteTest!ClienteTest@host - Client disconected
+[2025-11-23 14:27:31] 4 - New client connected: 127.0.0.1
+[2025-11-23 14:27:31] 4 - Message client: 
+[2025-11-23 14:27:33] 4 - Message client: PAss
+[2025-11-23 14:27:34] 4 - Message client: USER ClienteTest
+[2025-11-23 14:27:35] 4 - Message client: NICK ClienteTest
+[2025-11-23 14:27:36] 4 - Message client: USER ClienteTest * * ClienteTest
+[2025-11-23 14:27:37] 4 - Message client: USER ClienteTest * * :ClienteTest
+[2025-11-23 14:27:38] 4 - Message client: JOIN #roma
+[2025-11-23 14:27:39] 4 - Message client: KICK
+[2025-11-23 14:27:40] 4 - Message client: PART
+[2025-11-23 14:27:41] 4 - Message client: PRIVMSG
+[2025-11-23 14:27:42] 4 - Message client: TOPIC
+[2025-11-23 14:27:43] 4 - Message client: MODE
+[2025-11-23 14:27:44] 4 - Message client: no se que poner esto es una prueba
+[2025-11-23 14:27:45] 4 - Message client: PASS 23
+[2025-11-23 14:27:46] 4 - Message client: PASS 24
+[2025-11-23 14:27:47] 4 - Message client: PASS 23
+[2025-11-23 14:27:48] 4 - Message client: No se que poner
+[2025-11-23 14:27:49] 4 - Message client: JOIN #roma
+[2025-11-23 14:27:50] 4 - Message client: KICK
+[2025-11-23 14:27:51] 4 - Message client: PART
+[2025-11-23 14:27:52] 4 - Message client: PRIVMSG
+[2025-11-23 14:27:53] 4 - Message client: TOPIC
+[2025-11-23 14:27:54] 4 - Message client: MODE
+[2025-11-23 14:27:55] 4 - Message client: USER
+[2025-11-23 14:27:56] 4 - Message client: NICK
+[2025-11-23 14:27:57] 4 - Message client: NICK ClienteTest ClienteTest
+[2025-11-23 14:27:58] 4 - Message client: NICK ClienteTest
+[2025-11-23 14:27:59] 4 - Message client: JOIN #roma
+[2025-11-23 14:28:00] 4 - Message client: NICK ClienteTest
+[2025-11-23 14:28:01] 4 - Message client: USER * * *
+[2025-11-23 14:28:02] 4 - Message client: USER ClienteTest * * ClienteTest ClienteTest
+[2025-11-23 14:28:03] 4 - Message client: USER ClienteTest * * :ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest
+[2025-11-23 14:28:04] 4 - Message client: USER ClienteTest * * :
+[2025-11-23 14:28:06] 4 - Message client: USER ClienteTest * * :ClienteTest ClienteTest
+[2025-11-23 14:28:07] ClienteTest!ClienteTest@host - Message client: JOIN
+[2025-11-23 14:28:08] ClienteTest!ClienteTest@host - Message client: JOIN roma
+[2025-11-23 14:28:09] ClienteTest!ClienteTest@host - Message client: JOIN #roma #roma
+[2025-11-23 14:28:10] ClienteTest!ClienteTest@host - Message client: JOIN #roma
+[2025-11-23 14:28:11] ClienteTest!ClienteTest@host - Message client: JOIN #madrid
+[2025-11-23 14:28:12] ClienteTest!ClienteTest@host - Message client: JOIN #berlin
+[2025-11-23 14:28:52] 5 - New client connected: 127.0.0.1
+[2025-11-23 14:28:52] 5 - Message client: PASS 23
+[2025-11-23 14:28:53] 5 - Message client: NICK Cliente1
+[2025-11-23 14:28:54] 5 - Message client: USER Cliente1 0 * :Cliente1
+[2025-11-23 14:28:55] Cliente1!Cliente1@host - Message client: JOIN #roma
+[2025-11-23 14:28:56] Cliente1!Cliente1@host - Message client: JOIN #madrid
+[2025-11-23 14:41:20] 1 - New client connected: 127.0.0.1
+[2025-11-23 14:41:20] 1 - Message client: PASS 23
+[2025-11-23 14:41:21] 1 - Message client: NICK ADMIN
+[2025-11-23 14:41:22] 1 - Message client: USER ADMIN 0 * :ADMIN
+[2025-11-23 14:41:23] ADMIN!ADMIN@host - Message client: JOIN #madrid
+[2025-11-23 14:41:24] ADMIN!ADMIN@host - Message client: JOIN #berlin
+[2025-11-23 14:41:25] ADMIN!ADMIN@host - Message client: MODE #berlin +i
+[2025-11-23 14:41:26] ADMIN!ADMIN@host - Message client: MODE #madrid +l 2
+[2025-11-23 14:41:26] 2 - New client connected: 127.0.0.1
+[2025-11-23 14:41:26] 2 - Message client: 
+[2025-11-23 14:41:27] 2 - Message client: PAss
+[2025-11-23 14:41:28] 2 - Message client: USER ClienteTest
+[2025-11-23 14:41:29] 2 - Message client: NICK ClienteTest
+[2025-11-23 14:41:31] 2 - Message client: USER ClienteTest * * ClienteTest
+[2025-11-23 14:41:32] 2 - Message client: USER ClienteTest * * :ClienteTest
+[2025-11-23 14:41:33] 2 - Message client: JOIN #roma
+[2025-11-23 14:41:34] 2 - Message client: KICK
+[2025-11-23 14:41:35] 2 - Message client: PART
+[2025-11-23 14:41:36] 2 - Message client: PRIVMSG
+[2025-11-23 14:41:37] 2 - Message client: TOPIC
+[2025-11-23 14:41:38] 2 - Message client: MODE
+[2025-11-23 14:41:39] 2 - Message client: no se que poner esto es una prueba
+[2025-11-23 14:41:40] 2 - Message client: PASS 23
+[2025-11-23 14:41:41] 2 - Message client: PASS 24
+[2025-11-23 14:41:42] 2 - Message client: PASS 23
+[2025-11-23 14:41:43] 2 - Message client: No se que poner
+[2025-11-23 14:41:44] 2 - Message client: JOIN #roma
+[2025-11-23 14:41:45] 2 - Message client: KICK
+[2025-11-23 14:41:46] 2 - Message client: PART
+[2025-11-23 14:41:47] 2 - Message client: PRIVMSG
+[2025-11-23 14:41:48] 2 - Message client: TOPIC
+[2025-11-23 14:41:49] 2 - Message client: MODE
+[2025-11-23 14:41:50] 2 - Message client: USER
+[2025-11-23 14:41:51] 2 - Message client: NICK
+[2025-11-23 14:41:52] 2 - Message client: NICK ClienteTest ClienteTest
+[2025-11-23 14:41:53] 2 - Message client: NICK ClienteTest
+[2025-11-23 14:41:54] 2 - Message client: JOIN #roma
+[2025-11-23 14:41:55] 2 - Message client: NICK ClienteTest
+[2025-11-23 14:41:56] 2 - Message client: USER * * *
+[2025-11-23 14:41:57] 2 - Message client: USER ClienteTest * * ClienteTest ClienteTest
+[2025-11-23 14:41:58] 2 - Message client: USER ClienteTest * * :ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest
+[2025-11-23 14:41:59] 2 - Message client: USER ClienteTest * * :
+[2025-11-23 14:42:00] 2 - Message client: USER ClienteTest * * :ClienteTest ClienteTest
+[2025-11-23 14:42:01] ClienteTest!ClienteTest@host - Message client: JOIN
+[2025-11-23 14:42:02] ClienteTest!ClienteTest@host - Message client: JOIN roma
+[2025-11-23 14:42:05] ClienteTest!ClienteTest@host - Message client: JOIN #roma #roma
+[2025-11-23 14:42:06] ClienteTest!ClienteTest@host - Message client: JOIN #roma
+[2025-11-23 14:42:07] ClienteTest!ClienteTest@host - Message client: JOIN #madrid
+[2025-11-23 14:42:08] ClienteTest!ClienteTest@host - Message client: JOIN #berlin
+[2025-11-23 14:42:21] 3 - New client connected: 127.0.0.1
+[2025-11-23 14:42:21] 3 - Message client: PASS 23
+[2025-11-23 14:42:22] 3 - Message client: NICK Cliente1
+[2025-11-23 14:42:23] 3 - Message client: USER Cliente1 0 * :Cliente1
+[2025-11-23 14:42:24] Cliente1!Cliente1@host - Message client: JOIN #roma
+[2025-11-23 14:42:25] Cliente1!Cliente1@host - Message client: JOIN #madrid
+[2025-11-23 14:42:29] Cliente1!Cliente1@host - Client disconected
+[2025-11-23 14:42:30] 4 - New client connected: 127.0.0.1
+[2025-11-23 14:42:30] 4 - Message client: PASS 23
+[2025-11-23 14:42:31] 4 - Message client: NICK Cliente1
+[2025-11-23 14:42:32] 4 - Message client: USER Cliente1 0 * :Cliente1
+[2025-11-23 14:42:33] Cliente1!Cliente1@host - Message client: JOIN #roma
+[2025-11-23 14:42:34] Cliente1!Cliente1@host - Message client: JOIN #madrid
+[2025-11-23 14:42:38] ClienteTest!ClienteTest@host - Client disconected
+[2025-11-23 14:42:39] 5 - New client connected: 127.0.0.1
+[2025-11-23 14:42:39] 5 - Message client: 
+[2025-11-23 14:42:40] 5 - Message client: PAss
+[2025-11-23 14:42:41] 5 - Message client: USER ClienteTest
+[2025-11-23 14:42:42] 5 - Message client: NICK ClienteTest
+[2025-11-23 14:42:43] 5 - Message client: USER ClienteTest * * ClienteTest
+[2025-11-23 14:42:44] 5 - Message client: USER ClienteTest * * :ClienteTest
+[2025-11-23 14:42:45] 5 - Message client: JOIN #roma
+[2025-11-23 14:42:46] 5 - Message client: KICK
+[2025-11-23 14:42:47] 5 - Message client: PART
+[2025-11-23 14:42:48] 5 - Message client: PRIVMSG
+[2025-11-23 14:42:49] 5 - Message client: TOPIC
+[2025-11-23 14:42:50] 5 - Message client: MODE
+[2025-11-23 14:42:51] 5 - Message client: no se que poner esto es una prueba
+[2025-11-23 14:42:52] 5 - Message client: PASS 23
+[2025-11-23 14:42:53] 5 - Message client: PASS 24
+[2025-11-23 14:42:54] 5 - Message client: PASS 23
+[2025-11-23 14:42:55] 5 - Message client: No se que poner
+[2025-11-23 14:42:56] 5 - Message client: JOIN #roma
+[2025-11-23 14:42:57] 5 - Message client: KICK
+[2025-11-23 14:42:58] 5 - Message client: PART
+[2025-11-23 14:42:59] 5 - Message client: PRIVMSG
+[2025-11-23 14:43:00] 5 - Message client: TOPIC
+[2025-11-23 14:43:01] 5 - Message client: MODE
+[2025-11-23 14:43:02] 5 - Message client: USER
+[2025-11-23 14:43:03] 5 - Message client: NICK
+[2025-11-23 14:43:04] 5 - Message client: NICK ClienteTest ClienteTest
+[2025-11-23 14:43:05] 5 - Message client: NICK ClienteTest
+[2025-11-23 14:43:06] 5 - Message client: JOIN #roma
+[2025-11-23 14:43:07] 5 - Message client: NICK ClienteTest
+[2025-11-23 14:43:08] 5 - Message client: USER * * *
+[2025-11-23 14:43:09] 5 - Message client: USER ClienteTest * * ClienteTest ClienteTest
+[2025-11-23 14:43:10] 5 - Message client: USER ClienteTest * * :ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest
+[2025-11-23 14:43:12] 5 - Message client: USER ClienteTest * * :
+[2025-11-23 14:43:13] 5 - Message client: USER ClienteTest * * :ClienteTest ClienteTest
+[2025-11-23 14:43:14] ClienteTest!ClienteTest@host - Message client: JOIN
+[2025-11-23 14:43:15] ClienteTest!ClienteTest@host - Message client: JOIN roma
+[2025-11-23 14:43:16] ClienteTest!ClienteTest@host - Message client: JOIN #roma #roma
+[2025-11-23 14:43:17] ClienteTest!ClienteTest@host - Message client: JOIN #roma
+[2025-11-23 14:43:18] ClienteTest!ClienteTest@host - Message client: JOIN #madrid
+[2025-11-23 14:43:19] ClienteTest!ClienteTest@host - Message client: JOIN #berlin
+[2025-11-23 14:43:30] Cliente1!Cliente1@host - Client disconected
+[2025-11-23 14:43:31] 6 - New client connected: 127.0.0.1
+[2025-11-23 14:43:31] 6 - Message client: PASS 23
+[2025-11-23 14:43:32] 6 - Message client: NICK Cliente1
+[2025-11-23 14:43:33] 6 - Message client: USER Cliente1 0 * :Cliente1
+[2025-11-23 14:43:34] Cliente1!Cliente1@host - Message client: JOIN #roma
+[2025-11-23 14:43:35] Cliente1!Cliente1@host - Message client: JOIN #madrid
+[2025-11-23 14:44:07] ClienteTest!ClienteTest@host - Client disconected
+[2025-11-23 14:44:09] Cliente1!Cliente1@host - Client disconected
+[2025-11-23 14:44:10] 7 - New client connected: 127.0.0.1
+[2025-11-23 14:44:10] 7 - Message client: PASS 23
+[2025-11-23 14:44:11] 7 - Message client: NICK Cliente1
+[2025-11-23 14:44:12] 7 - Message client: USER Cliente1 0 * :Cliente1
+[2025-11-23 14:44:13] Cliente1!Cliente1@host - Message client: JOIN #roma
+[2025-11-23 14:44:14] Cliente1!Cliente1@host - Message client: JOIN #madrid
+[2025-11-23 15:01:34] 1 - New client connected: 127.0.0.1
+[2025-11-23 15:02:03] 1 - Message client: com^Dman^Dd
+[2025-11-23 15:02:24] 1 - Client disconected
+[2025-11-23 15:02:36] 2 - New client connected: 127.0.0.1
+[2025-11-23 15:02:44] 2 - Message client: com^Dman^Dd
+[2025-11-23 15:03:44] 2 - Client disconected
+[2025-11-23 15:03:46] 3 - New client connected: 127.0.0.1
+[2025-11-23 15:03:50] 3 - Message client: com
+[2025-11-23 15:03:57] 3 - Message client: man
+[2025-11-23 15:03:59] 3 - Message client: d
+[2025-11-23 15:03:59] 3 - Message client: 
+[2025-11-23 18:13:52] 1 - New client connected: 127.0.0.1
+[2025-11-23 18:13:52] 1 - Message client:PASS 23
+[2025-11-23 18:13:55] 1 - Message client:NICK ADMIN
+[2025-11-23 18:13:56] 1 - Message client:USER ADMIN 0 * :ADMIN
+[2025-11-23 18:13:57] ADMIN!ADMIN@host - Message client:JOIN #madrid
+[2025-11-23 18:13:58] ADMIN!ADMIN@host - Message client:JOIN #berlin
+[2025-11-23 18:13:59] ADMIN!ADMIN@host - Message client:MODE #berlin +i
+[2025-11-23 18:14:00] ADMIN!ADMIN@host - Message client:MODE #madrid +l 2
+[2025-11-23 18:14:01] 2 - New client connected: 127.0.0.1
+[2025-11-23 18:14:01] 2 - Message client:
+[2025-11-23 18:14:02] 2 - Message client:PAss
+[2025-11-23 18:14:03] 2 - Message client:USER ClienteTest
+[2025-11-23 18:14:04] 2 - Message client:NICK ClienteTest
+[2025-11-23 18:14:05] 2 - Message client:USER ClienteTest * * ClienteTest
+[2025-11-23 18:14:06] 2 - Message client:USER ClienteTest * * :ClienteTest
+[2025-11-23 18:14:07] 2 - Message client:JOIN #roma
+[2025-11-23 18:14:08] 2 - Message client:KICK
+[2025-11-23 18:14:09] 2 - Message client:PART
+[2025-11-23 18:14:10] 2 - Message client:PRIVMSG
+[2025-11-23 18:14:11] 2 - Message client:TOPIC
+[2025-11-23 18:14:12] 2 - Message client:MODE
+[2025-11-23 18:14:13] 2 - Message client:no se que poner esto es una prueba
+[2025-11-23 18:14:14] 2 - Message client:PASS 23
+[2025-11-23 18:14:15] 2 - Message client:PASS 24
+[2025-11-23 18:14:16] 2 - Message client:PASS 23
+[2025-11-23 18:14:17] 2 - Message client:No se que poner
+[2025-11-23 18:14:18] 2 - Message client:JOIN #roma
+[2025-11-23 18:14:19] 2 - Message client:KICK
+[2025-11-23 18:14:20] 2 - Message client:PART
+[2025-11-23 18:14:21] 2 - Message client:PRIVMSG
+[2025-11-23 18:14:22] 2 - Message client:TOPIC
+[2025-11-23 18:14:23] 2 - Message client:MODE
+[2025-11-23 18:14:24] 2 - Message client:USER
+[2025-11-23 18:14:25] 2 - Message client:NICK
+[2025-11-23 18:14:26] 2 - Message client:NICK ClienteTest ClienteTest
+[2025-11-23 18:14:29] 2 - Message client:NICK ClienteTest
+[2025-11-23 18:14:30] 2 - Message client:JOIN #roma
+[2025-11-23 18:14:31] 2 - Message client:NICK ClienteTest
+[2025-11-23 18:14:32] 2 - Message client:USER * * *
+[2025-11-23 18:14:33] 2 - Message client:USER ClienteTest * * ClienteTest ClienteTest
+[2025-11-23 18:14:34] 2 - Message client:USER ClienteTest * * :ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest
+[2025-11-23 18:14:35] 2 - Message client:USER ClienteTest * * :
+[2025-11-23 18:14:36] 2 - Message client:USER ClienteTest * * :ClienteTest ClienteTest
+[2025-11-23 18:14:37] ClienteTest!ClienteTest@host - Message client:JOIN
+[2025-11-23 18:14:38] ClienteTest!ClienteTest@host - Message client:JOIN roma
+[2025-11-23 18:14:39] ClienteTest!ClienteTest@host - Message client:JOIN #roma #roma
+[2025-11-23 18:14:40] ClienteTest!ClienteTest@host - Message client:JOIN #roma
+[2025-11-23 18:14:41] ClienteTest!ClienteTest@host - Message client:JOIN #madrid
+[2025-11-23 18:14:42] ClienteTest!ClienteTest@host - Message client:JOIN #berlin
+[2025-11-23 18:14:43] ClienteTest!ClienteTest@host - Message client:JOIN #lisboa
+[2025-11-23 18:15:08] 1 - New client connected: 127.0.0.1
+[2025-11-23 18:15:22] 1 - Client disconected
+[2025-11-23 18:15:28] 2 - New client connected: 127.0.0.1
+[2025-11-23 18:16:15] 1 - New client connected: 127.0.0.1
+[2025-11-23 18:16:17] 1 - Message client:com
+[2025-11-23 18:16:41] 1 - Client disconected
+[2025-11-23 18:17:18] 2 - New client connected: 127.0.0.1
+[2025-11-23 18:17:20] 2 - Message client:command
+[2025-11-23 18:19:03] 2 - Client disconected
+[2025-11-23 18:19:16] 3 - New client connected: 127.0.0.1
+[2025-11-23 18:19:18] 3 - Message client:command
+[2025-11-23 18:19:29] 3 - Client disconected
+[2025-11-23 18:19:36] 4 - New client connected: 127.0.0.1
+[2025-11-23 18:19:38] 4 - Message client:PASS 23
+[2025-11-23 18:19:39] 4 - Message client:USER Cliente1 0 * :Cliente1\nNICK Cliente1
+[2025-11-23 18:19:40] 4 - Message client:JOIN #roma
+[2025-11-23 18:19:41] 4 - Message client:JOIN #madrid
+[2025-11-23 18:20:14] 4 - Client disconected
+[2025-11-23 18:20:15] 5 - New client connected: 127.0.0.1
+[2025-11-23 18:20:17] 5 - Message client:PASS 23
+[2025-11-23 18:20:18] 5 - Message client:USER Cliente1 0 * :Cliente1\r\nNICK Cliente1
+[2025-11-23 18:20:19] 5 - Message client:JOIN #roma
+[2025-11-23 18:20:20] 5 - Message client:JOIN #madrid
+[2025-11-23 18:21:05] 5 - Client disconected
+[2025-11-23 18:21:05] 6 - New client connected: 127.0.0.1
+[2025-11-23 18:21:07] 6 - Message client:PASS 23
+[2025-11-23 18:21:08] 6 - Message client:USER Cliente1 0 * :Cliente1
+[2025-11-23 18:21:08] 6 - Message client:NICK Cliente1
+[2025-11-23 18:21:10] Cliente1!Cliente1@host - Message client:JOIN #roma
+[2025-11-23 18:21:11] Cliente1!Cliente1@host - Message client:JOIN #madrid
+[2025-11-23 21:05:32] 1 - New client connected: 127.0.0.1
+[2025-11-23 21:05:32] 1 - Message client:PASS 23
+[2025-11-23 21:05:33] 1 - Message client:NICK ADMIN
+[2025-11-23 21:05:34] 1 - Message client:USER ADMIN 0 * :ADMIN
+[2025-11-23 21:05:35] ADMIN!ADMIN@host - Message client:JOIN #madrid
+[2025-11-23 21:05:38] 2 - New client connected: 127.0.0.1
+[2025-11-23 21:05:38] 2 - Message client:
+[2025-11-23 21:05:38] ADMIN!ADMIN@host - Message client:JOIN #berlin
+[2025-11-23 21:05:39] 2 - Message client:PAss
+[2025-11-23 21:05:39] ADMIN!ADMIN@host - Message client:MODE #berlin +i
+[2025-11-23 21:05:40] 2 - Message client:USER ClienteTest
+[2025-11-23 21:05:40] ADMIN!ADMIN@host - Message client:MODE #madrid +l 2
+[2025-11-23 21:05:41] 2 - Message client:NICK ClienteTest
+[2025-11-23 21:05:41] ADMIN!ADMIN@host - Message client:JOIN #moscu
+[2025-11-23 21:05:42] 2 - Message client:USER ClienteTest * * ClienteTest
+[2025-11-23 21:05:42] ADMIN!ADMIN@host - Message client:MODE #moscu +k 24
+[2025-11-23 21:05:43] 2 - Message client:USER ClienteTest * * :ClienteTest
+[2025-11-23 21:05:44] 2 - Message client:JOIN #roma
+[2025-11-23 21:05:45] 2 - Message client:KICK
+[2025-11-23 21:05:46] 2 - Message client:PART
+[2025-11-23 21:05:47] 2 - Message client:PRIVMSG
+[2025-11-23 21:05:48] 2 - Message client:TOPIC
+[2025-11-23 21:05:49] 2 - Message client:MODE
+[2025-11-23 21:05:50] 2 - Message client:no se que poner esto es una prueba
+[2025-11-23 21:05:51] 2 - Message client:PASS 23
+[2025-11-23 21:05:52] 2 - Message client:PASS 24
+[2025-11-23 21:05:53] 2 - Message client:PASS 23
+[2025-11-23 21:05:54] 2 - Message client:No se que poner
+[2025-11-23 21:05:55] 2 - Message client:JOIN #roma
+[2025-11-23 21:05:56] 2 - Message client:KICK
+[2025-11-23 21:05:57] 2 - Message client:PART
+[2025-11-23 21:05:58] 2 - Message client:PRIVMSG
+[2025-11-23 21:05:59] 2 - Message client:TOPIC
+[2025-11-23 21:06:00] 2 - Message client:MODE
+[2025-11-23 21:06:01] 2 - Message client:USER
+[2025-11-23 21:06:02] 2 - Message client:NICK
+[2025-11-23 21:06:03] 2 - Message client:NICK ClienteTest ClienteTest
+[2025-11-23 21:06:04] 2 - Message client:NICK ClienteTest
+[2025-11-23 21:06:05] 2 - Message client:JOIN #roma
+[2025-11-23 21:06:06] 2 - Message client:NICK ClienteTest
+[2025-11-23 21:06:07] 2 - Message client:USER * * *
+[2025-11-23 21:06:08] 2 - Message client:USER ClienteTest * * ClienteTest ClienteTest
+[2025-11-23 21:06:09] 2 - Message client:USER ClienteTest * * :ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest
+[2025-11-23 21:06:12] 2 - Message client:USER ClienteTest * * :
+[2025-11-23 21:06:13] 2 - Message client:USER ClienteTest * * :ClienteTest ClienteTest
+[2025-11-23 21:06:14] ClienteTest!ClienteTest@host - Message client:JOIN
+[2025-11-23 21:06:15] ClienteTest!ClienteTest@host - Message client:JOIN roma
+[2025-11-23 21:06:16] ClienteTest!ClienteTest@host - Message client:JOIN #roma #roma
+[2025-11-23 21:06:17] ClienteTest!ClienteTest@host - Message client:JOIN #roma
+[2025-11-23 21:06:18] ClienteTest!ClienteTest@host - Message client:JOIN #madrid
+[2025-11-23 21:06:19] ClienteTest!ClienteTest@host - Message client:JOIN #berlin
+[2025-11-23 21:06:20] ClienteTest!ClienteTest@host - Message client:JOIN #lisboa
+[2025-11-23 21:06:21] ClienteTest!ClienteTest@host - Message client:JOIN  25
+[2025-11-23 21:06:22] ClienteTest!ClienteTest@host - Message client:JOIN  24
+[2025-11-23 21:07:23] ADMIN!ADMIN@host - Client disconected
+[2025-11-23 21:07:23] 3 - New client connected: 127.0.0.1
+[2025-11-23 21:07:23] 3 - Message client:PASS 23
+[2025-11-23 21:07:24] 3 - Message client:NICK ADMIN
+[2025-11-23 21:07:25] 3 - Message client:USER ADMIN 0 * :ADMIN
+[2025-11-23 21:07:26] ADMIN!ADMIN@host - Message client:JOIN #madrid
+[2025-11-23 21:07:27] ADMIN!ADMIN@host - Message client:JOIN #berlin
+[2025-11-23 21:07:28] ADMIN!ADMIN@host - Message client:MODE #berlin +i
+[2025-11-23 21:07:29] ADMIN!ADMIN@host - Message client:MODE #madrid +l 2
+[2025-11-23 21:07:30] ADMIN!ADMIN@host - Message client:JOIN #moscu
+[2025-11-23 21:07:31] ADMIN!ADMIN@host - Message client:MODE #moscu +k 24
+[2025-11-23 21:10:02] ClienteTest!ClienteTest@host - Client disconected
+[2025-11-23 21:10:04] 4 - New client connected: 127.0.0.1
+[2025-11-23 21:10:04] 4 - Message client:
+[2025-11-23 21:10:05] 4 - Message client:PAss
+[2025-11-23 21:10:06] 4 - Message client:USER ClienteTest
+[2025-11-23 21:10:07] 4 - Message client:NICK ClienteTest
+[2025-11-23 21:10:08] 4 - Message client:USER ClienteTest * * ClienteTest
+[2025-11-23 21:10:11] 4 - Message client:USER ClienteTest * * :ClienteTest
+[2025-11-23 21:10:12] 4 - Message client:JOIN #roma
+[2025-11-23 21:10:13] 4 - Message client:KICK
+[2025-11-23 21:10:14] 4 - Message client:PART
+[2025-11-23 21:10:15] 4 - Message client:PRIVMSG
+[2025-11-23 21:10:16] 4 - Message client:TOPIC
+[2025-11-23 21:10:17] 4 - Message client:MODE
+[2025-11-23 21:10:18] 4 - Message client:no se que poner esto es una prueba
+[2025-11-23 21:10:19] 4 - Message client:PASS 23
+[2025-11-23 21:10:20] 4 - Message client:PASS 24
+[2025-11-23 21:10:21] 4 - Message client:PASS 23
+[2025-11-23 21:10:22] 4 - Message client:No se que poner
+[2025-11-23 21:10:23] 4 - Message client:JOIN #roma
+[2025-11-23 21:10:24] 4 - Message client:KICK
+[2025-11-23 21:10:25] 4 - Message client:PART
+[2025-11-23 21:10:26] 4 - Message client:PRIVMSG
+[2025-11-23 21:10:27] 4 - Message client:TOPIC
+[2025-11-23 21:10:28] 4 - Message client:MODE
+[2025-11-23 21:10:29] 4 - Message client:USER
+[2025-11-23 21:10:30] 4 - Message client:NICK
+[2025-11-23 21:10:31] 4 - Message client:NICK ClienteTest ClienteTest
+[2025-11-23 21:10:32] 4 - Message client:NICK ClienteTest
+[2025-11-23 21:10:33] 4 - Message client:JOIN #roma
+[2025-11-23 21:10:34] 4 - Message client:NICK ClienteTest
+[2025-11-23 21:10:35] 4 - Message client:USER * * *
+[2025-11-23 21:10:36] 4 - Message client:USER ClienteTest * * ClienteTest ClienteTest
+[2025-11-23 21:10:37] 4 - Message client:USER ClienteTest * * :ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest
+[2025-11-23 21:10:38] 4 - Message client:USER ClienteTest * * :
+[2025-11-23 21:10:39] 4 - Message client:USER ClienteTest * * :ClienteTest ClienteTest
+[2025-11-23 21:10:40] ClienteTest!ClienteTest@host - Message client:JOIN
+[2025-11-23 21:10:41] ClienteTest!ClienteTest@host - Message client:JOIN roma
+[2025-11-23 21:10:42] ClienteTest!ClienteTest@host - Message client:JOIN #roma #roma
+[2025-11-23 21:10:43] ClienteTest!ClienteTest@host - Message client:JOIN #roma
+[2025-11-23 21:10:46] ClienteTest!ClienteTest@host - Message client:JOIN #madrid
+[2025-11-23 21:10:47] ClienteTest!ClienteTest@host - Message client:JOIN #berlin
+[2025-11-23 21:10:48] ClienteTest!ClienteTest@host - Message client:JOIN #lisboa
+[2025-11-23 21:10:49] ClienteTest!ClienteTest@host - Message client:JOIN #moscu 25
+[2025-11-23 21:10:50] ClienteTest!ClienteTest@host - Message client:JOIN #moscu 24
+[2025-11-23 21:12:21] 1 - New client connected: 127.0.0.1
+[2025-11-23 21:12:21] 1 - Message client:PASS 23
+[2025-11-23 21:12:22] 1 - Message client:NICK ADMIN
+[2025-11-23 21:12:23] 1 - Message client:USER ADMIN 0 * :ADMIN
+[2025-11-23 21:12:24] ADMIN!ADMIN@host - Message client:JOIN #madrid
+[2025-11-23 21:12:25] ADMIN!ADMIN@host - Message client:JOIN #berlin
+[2025-11-23 21:12:28] ADMIN!ADMIN@host - Message client:MODE #berlin +i
+[2025-11-23 21:12:29] ADMIN!ADMIN@host - Message client:MODE #madrid +l 2
+[2025-11-23 21:12:30] ADMIN!ADMIN@host - Message client:JOIN #moscu
+[2025-11-23 21:12:31] ADMIN!ADMIN@host - Message client:MODE #moscu +k 24
+[2025-11-23 21:12:33] 2 - New client connected: 127.0.0.1
+[2025-11-23 21:12:33] 2 - Message client:
+[2025-11-23 21:12:34] 2 - Message client:PAss
+[2025-11-23 21:12:35] 2 - Message client:USER ClienteTest
+[2025-11-23 21:12:36] 2 - Message client:NICK ClienteTest
+[2025-11-23 21:12:37] 2 - Message client:USER ClienteTest * * ClienteTest
+[2025-11-23 21:12:38] 2 - Message client:USER ClienteTest * * :ClienteTest
+[2025-11-23 21:12:39] 2 - Message client:JOIN #roma
+[2025-11-23 21:12:40] 2 - Message client:KICK
+[2025-11-23 21:12:41] 2 - Message client:PART
+[2025-11-23 21:12:42] 2 - Message client:PRIVMSG
+[2025-11-23 21:12:43] 2 - Message client:TOPIC
+[2025-11-23 21:12:44] 2 - Message client:MODE
+[2025-11-23 21:12:45] 2 - Message client:no se que poner esto es una prueba
+[2025-11-23 21:12:46] 2 - Message client:PASS 23
+[2025-11-23 21:12:47] 2 - Message client:PASS 24
+[2025-11-23 21:12:48] 2 - Message client:PASS 23
+[2025-11-23 21:12:49] 2 - Message client:No se que poner
+[2025-11-23 21:12:50] 2 - Message client:JOIN #roma
+[2025-11-23 21:12:51] 2 - Message client:KICK
+[2025-11-23 21:12:52] 2 - Message client:PART
+[2025-11-23 21:12:53] 2 - Message client:PRIVMSG
+[2025-11-23 21:12:54] 2 - Message client:TOPIC
+[2025-11-23 21:12:55] 2 - Message client:MODE
+[2025-11-23 21:12:56] 2 - Message client:USER
+[2025-11-23 21:12:57] 2 - Message client:NICK
+[2025-11-23 21:12:58] 2 - Message client:NICK ClienteTest ClienteTest
+[2025-11-23 21:12:59] 2 - Message client:NICK ClienteTest
+[2025-11-23 21:13:02] 2 - Message client:JOIN #roma
+[2025-11-23 21:13:03] 2 - Message client:NICK ClienteTest
+[2025-11-23 21:13:04] 2 - Message client:USER * * *
+[2025-11-23 21:13:05] 2 - Message client:USER ClienteTest * * ClienteTest ClienteTest
+[2025-11-23 21:13:06] 2 - Message client:USER ClienteTest * * :ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest
+[2025-11-23 21:13:07] 2 - Message client:USER ClienteTest * * :
+[2025-11-23 21:13:08] 2 - Message client:USER ClienteTest * * :ClienteTest ClienteTest
+[2025-11-23 21:13:09] ClienteTest!ClienteTest@host - Message client:JOIN
+[2025-11-23 21:13:10] ClienteTest!ClienteTest@host - Message client:JOIN roma
+[2025-11-23 21:13:11] ClienteTest!ClienteTest@host - Message client:JOIN #roma #roma
+[2025-11-23 21:13:45] 1 - New client connected: 127.0.0.1
+[2025-11-23 21:13:45] 1 - Message client:PASS 23
+[2025-11-23 21:13:46] 1 - Message client:NICK ADMIN
+[2025-11-23 21:13:47] 1 - Message client:USER ADMIN 0 * :ADMIN
+[2025-11-23 21:13:48] ADMIN!ADMIN@host - Message client:JOIN #madrid
+[2025-11-23 21:13:48] 2 - New client connected: 127.0.0.1
+[2025-11-23 21:13:48] 2 - Message client:
+[2025-11-23 21:13:49] ADMIN!ADMIN@host - Message client:JOIN #berlin
+[2025-11-23 21:13:49] 2 - Message client:PAss
+[2025-11-23 21:13:50] ADMIN!ADMIN@host - Message client:MODE #berlin +i
+[2025-11-23 21:13:50] 2 - Message client:USER ClienteTest
+[2025-11-23 21:13:51] ADMIN!ADMIN@host - Message client:MODE #madrid +l 2
+[2025-11-23 21:13:51] 2 - Message client:NICK ClienteTest
+[2025-11-23 21:13:52] ADMIN!ADMIN@host - Message client:JOIN #moscu
+[2025-11-23 21:13:52] 2 - Message client:USER ClienteTest * * ClienteTest
+[2025-11-23 21:13:53] ADMIN!ADMIN@host - Message client:MODE #moscu +k 24
+[2025-11-23 21:13:53] 2 - Message client:USER ClienteTest * * :ClienteTest
+[2025-11-23 21:13:54] 2 - Message client:JOIN #roma
+[2025-11-23 21:13:55] 2 - Message client:KICK
+[2025-11-23 21:13:56] 2 - Message client:PART
+[2025-11-23 21:13:57] 2 - Message client:PRIVMSG
+[2025-11-23 21:13:58] 2 - Message client:TOPIC
+[2025-11-23 21:13:59] 2 - Message client:MODE
+[2025-11-23 21:14:00] 2 - Message client:no se que poner esto es una prueba
+[2025-11-23 21:14:01] 2 - Message client:PASS 23
+[2025-11-23 21:14:02] 2 - Message client:PASS 24
+[2025-11-23 21:14:03] 2 - Message client:PASS 23
+[2025-11-23 21:14:04] 2 - Message client:No se que poner
+[2025-11-23 21:14:05] 2 - Message client:JOIN #roma
+[2025-11-23 21:14:06] 2 - Message client:KICK
+[2025-11-23 21:14:07] 2 - Message client:PART
+[2025-11-23 21:14:10] 2 - Message client:PRIVMSG
+[2025-11-23 21:14:11] 2 - Message client:TOPIC
+[2025-11-23 21:14:12] 2 - Message client:MODE
+[2025-11-23 21:14:13] 2 - Message client:USER
+[2025-11-23 21:14:14] 2 - Message client:NICK
+[2025-11-23 21:14:15] 2 - Message client:NICK ClienteTest ClienteTest
+[2025-11-23 21:14:16] 2 - Message client:NICK ClienteTest
+[2025-11-23 21:14:17] 2 - Message client:JOIN #roma
+[2025-11-23 21:14:18] 2 - Message client:NICK ClienteTest
+[2025-11-23 21:14:19] 2 - Message client:USER * * *
+[2025-11-23 21:14:20] 2 - Message client:USER ClienteTest * * ClienteTest ClienteTest
+[2025-11-23 21:14:21] 2 - Message client:USER ClienteTest * * :ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest
+[2025-11-23 21:14:22] 2 - Message client:USER ClienteTest * * :
+[2025-11-23 21:14:23] 2 - Message client:USER ClienteTest * * :ClienteTest ClienteTest
+[2025-11-23 21:14:24] ClienteTest!ClienteTest@host - Message client:JOIN
+[2025-11-23 21:14:25] ClienteTest!ClienteTest@host - Message client:JOIN roma
+[2025-11-23 21:14:26] ClienteTest!ClienteTest@host - Message client:JOIN #roma #roma
+[2025-11-23 21:14:27] ClienteTest!ClienteTest@host - Message client:JOIN #roma
+[2025-11-23 21:14:28] ClienteTest!ClienteTest@host - Message client:JOIN #madrid
+[2025-11-23 21:14:29] ClienteTest!ClienteTest@host - Message client:JOIN #berlin
+[2025-11-23 21:14:30] ClienteTest!ClienteTest@host - Message client:JOIN #lisboa
+[2025-11-23 21:14:31] ClienteTest!ClienteTest@host - Message client:JOIN #moscu 25
+[2025-11-23 21:14:32] ClienteTest!ClienteTest@host - Message client:JOIN #moscu 24
+[2025-11-23 21:15:57] 1 - New client connected: 127.0.0.1
+[2025-11-23 21:15:57] 1 - Message client:PASS 23
+[2025-11-23 21:15:58] 1 - Message client:NICK ADMIN
+[2025-11-23 21:15:59] 1 - Message client:USER ADMIN 0 * :ADMIN
+[2025-11-23 21:16:00] 2 - New client connected: 127.0.0.1
+[2025-11-23 21:16:00] 2 - Message client:
+[2025-11-23 21:16:00] ADMIN!ADMIN@host - Message client:JOIN #madrid
+[2025-11-23 21:16:01] 2 - Message client:PAss
+[2025-11-23 21:16:01] ADMIN!ADMIN@host - Message client:JOIN #berlin
+[2025-11-23 21:16:02] 2 - Message client:USER ClienteTest
+[2025-11-23 21:16:02] ADMIN!ADMIN@host - Message client:MODE #berlin +i
+[2025-11-23 21:16:03] 2 - Message client:NICK ClienteTest
+[2025-11-23 21:16:03] ADMIN!ADMIN@host - Message client:MODE #madrid +l 2
+[2025-11-23 21:16:04] 2 - Message client:USER ClienteTest * * ClienteTest
+[2025-11-23 21:16:04] ADMIN!ADMIN@host - Message client:JOIN #moscu
+[2025-11-23 21:16:05] 2 - Message client:USER ClienteTest * * :ClienteTest
+[2025-11-23 21:16:05] ADMIN!ADMIN@host - Message client:MODE #moscu +k 24
+[2025-11-23 21:16:06] 2 - Message client:JOIN #roma
+[2025-11-23 21:16:07] 2 - Message client:KICK
+[2025-11-23 21:16:08] 2 - Message client:PART
+[2025-11-23 21:16:09] 2 - Message client:PRIVMSG
+[2025-11-23 21:16:10] 2 - Message client:TOPIC
+[2025-11-23 21:16:11] 2 - Message client:MODE
+[2025-11-23 21:16:12] 2 - Message client:no se que poner esto es una prueba
+[2025-11-23 21:16:13] 2 - Message client:PASS 23
+[2025-11-23 21:16:14] 2 - Message client:PASS 24
+[2025-11-23 21:16:15] 2 - Message client:PASS 23
+[2025-11-23 21:16:16] 2 - Message client:No se que poner
+[2025-11-23 21:16:17] 2 - Message client:JOIN #roma
+[2025-11-23 21:16:18] 2 - Message client:KICK
+[2025-11-23 21:16:19] 2 - Message client:PART
+[2025-11-23 21:16:20] 2 - Message client:PRIVMSG
+[2025-11-23 21:16:21] 2 - Message client:TOPIC
+[2025-11-23 21:16:22] 2 - Message client:MODE
+[2025-11-23 21:16:23] 2 - Message client:USER
+[2025-11-23 21:16:24] 2 - Message client:NICK
+[2025-11-23 21:16:25] 2 - Message client:NICK ClienteTest ClienteTest
+[2025-11-23 21:16:28] 2 - Message client:NICK ClienteTest
+[2025-11-23 21:16:29] 2 - Message client:JOIN #roma
+[2025-11-23 21:16:30] 2 - Message client:NICK ClienteTest
+[2025-11-23 21:16:31] 2 - Message client:USER * * *
+[2025-11-23 21:16:32] 2 - Message client:USER ClienteTest * * ClienteTest ClienteTest
+[2025-11-23 21:16:33] 2 - Message client:USER ClienteTest * * :ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest ClienteTest
+[2025-11-23 21:16:34] 2 - Message client:USER ClienteTest * * :
+[2025-11-23 21:16:35] 2 - Message client:USER ClienteTest * * :ClienteTest ClienteTest
+[2025-11-23 21:16:36] ClienteTest!ClienteTest@host - Message client:JOIN
+[2025-11-23 21:16:37] ClienteTest!ClienteTest@host - Message client:JOIN roma
+[2025-11-23 21:16:38] ClienteTest!ClienteTest@host - Message client:JOIN #roma #roma
+[2025-11-23 21:16:39] ClienteTest!ClienteTest@host - Message client:JOIN #roma
+[2025-11-23 21:16:40] ClienteTest!ClienteTest@host - Message client:JOIN #madrid
+[2025-11-23 21:16:41] ClienteTest!ClienteTest@host - Message client:JOIN #berlin
+[2025-11-23 21:16:42] ClienteTest!ClienteTest@host - Message client:JOIN #lisboa
+[2025-11-23 21:16:43] ClienteTest!ClienteTest@host - Message client:JOIN #moscu 25
+[2025-11-23 21:16:44] ClienteTest!ClienteTest@host - Message client:JOIN #moscu 24
+[2025-11-23 21:46:05] 1 - New client connected: 127.0.0.1
+[2025-11-23 21:46:05] 1 - Message client:PASS 23
+[2025-11-23 21:46:06] 1 - Message client:NICK ADMIN
+[2025-11-23 21:46:07] 1 - Message client:USER ADMIN 0 * :ADMIN
+[2025-11-23 21:46:08] ADMIN!ADMIN@host - Message client:JOIN #madrid
+[2025-11-23 21:46:09] ADMIN!ADMIN@host - Message client:JOIN #berlin
+[2025-11-23 21:46:10] ADMIN!ADMIN@host - Message client:MODE #berlin +i
+[2025-11-23 21:46:11] ADMIN!ADMIN@host - Message client:MODE #madrid +l 2
+[2025-11-23 21:46:12] ADMIN!ADMIN@host - Message client:JOIN #moscu
+[2025-11-23 21:46:13] ADMIN!ADMIN@host - Message client:MODE #moscu +k 24
+[2025-11-23 21:46:45] 2 - New client connected: 127.0.0.1
+[2025-11-23 21:46:45] 2 - Message client:PASS 23
+[2025-11-23 21:46:46] 2 - Message client:NICK Cliente2
+[2025-11-23 21:46:47] 2 - Message client:USER Cliente2 0 * :Cliente2
+[2025-11-23 21:46:48] Cliente2!Cliente2@host - Message client:JOIN #roma
+[2025-11-23 21:46:49] Cliente2!Cliente2@host - Message client:BOT users
+[2025-11-23 21:46:50] Cliente2!Cliente2@host - Message client:BOT channels
+[2025-11-23 21:48:03] 1 - New client connected: 127.0.0.1
+[2025-11-23 21:48:03] 1 - Message client:PASS 23
+[2025-11-23 21:48:04] 1 - Message client:NICK ADMIN
+[2025-11-23 21:48:04] 2 - New client connected: 127.0.0.1
+[2025-11-23 21:48:04] 2 - Message client:PASS 23
+[2025-11-23 21:48:05] 1 - Message client:USER ADMIN 0 * :ADMIN
+[2025-11-23 21:48:05] 2 - Message client:NICK Cliente2
+[2025-11-23 21:48:06] ADMIN!ADMIN@host - Message client:JOIN #madrid
+[2025-11-23 21:48:06] 2 - Message client:USER Cliente2 0 * :Cliente2
+[2025-11-23 21:48:07] ADMIN!ADMIN@host - Message client:JOIN #berlin
+[2025-11-23 21:48:07] Cliente2!Cliente2@host - Message client:JOIN #roma
+[2025-11-23 21:48:08] ADMIN!ADMIN@host - Message client:MODE #berlin +i
+[2025-11-23 21:48:08] Cliente2!Cliente2@host - Message client:BOT users
+[2025-11-23 21:48:09] ADMIN!ADMIN@host - Message client:MODE #madrid +l 2
+[2025-11-23 21:48:09] Cliente2!Cliente2@host - Message client:BOT channels
+[2025-11-23 21:49:04] 1 - New client connected: 127.0.0.1
+[2025-11-23 21:49:05] 1 - Message client:PASS 23
+[2025-11-23 21:49:05] 1 - Message client:NICK ADMIN
+[2025-11-23 21:49:06] 1 - Message client:USER ADMIN 0 * :ADMIN
+[2025-11-23 21:49:07] ADMIN!ADMIN@host - Message client:JOIN #madrid
+[2025-11-23 21:49:08] ADMIN!ADMIN@host - Message client:JOIN #berlin
+[2025-11-23 21:49:09] ADMIN!ADMIN@host - Message client:MODE #berlin +i
+[2025-11-23 21:49:10] ADMIN!ADMIN@host - Message client:MODE #madrid +l 2
+[2025-11-23 21:49:11] ADMIN!ADMIN@host - Message client:JOIN #moscu
+[2025-11-23 21:49:12] 2 - New client connected: 127.0.0.1
+[2025-11-23 21:49:12] 2 - Message client:PASS 23
+[2025-11-23 21:49:12] ADMIN!ADMIN@host - Message client:MODE #moscu +k 24
+[2025-11-23 21:49:13] 2 - Message client:NICK Cliente2
+[2025-11-23 21:49:14] 2 - Message client:USER Cliente2 0 * :Cliente2
+[2025-11-23 21:49:15] Cliente2!Cliente2@host - Message client:JOIN #roma
+[2025-11-23 21:49:16] Cliente2!Cliente2@host - Message client:BOT users
+[2025-11-23 21:49:17] Cliente2!Cliente2@host - Message client:BOT channels
+[2025-11-23 21:51:51] 1 - New client connected: 127.0.0.1
+[2025-11-23 21:51:51] 1 - Message client:PASS 23
+[2025-11-23 21:51:52] 1 - Message client:NICK ADMIN
+[2025-11-23 21:51:53] 1 - Message client:USER ADMIN 0 * :ADMIN
+[2025-11-23 21:51:53] 2 - New client connected: 127.0.0.1
+[2025-11-23 21:51:53] 2 - Message client:PASS 23
+[2025-11-23 21:51:54] ADMIN!ADMIN@host - Message client:JOIN #madrid
+[2025-11-23 21:51:54] 2 - Message client:NICK Cliente2
+[2025-11-23 21:51:55] ADMIN!ADMIN@host - Message client:JOIN #berlin
+[2025-11-23 21:51:55] 2 - Message client:USER Cliente2 0 * :Cliente2
+[2025-11-23 21:51:56] ADMIN!ADMIN@host - Message client:MODE #berlin +i
+[2025-11-23 21:51:56] Cliente2!Cliente2@host - Message client:JOIN #roma
+[2025-11-23 21:51:57] ADMIN!ADMIN@host - Message client:MODE #madrid +l 2
+[2025-11-23 21:51:57] Cliente2!Cliente2@host - Message client:BOT users
+[2025-11-23 21:51:58] ADMIN!ADMIN@host - Message client:JOIN #moscu
+[2025-11-23 21:51:58] Cliente2!Cliente2@host - Message client:BOT channels
+[2025-11-23 21:51:59] ADMIN!ADMIN@host - Message client:MODE #moscu +k 24
+[2025-11-24 00:59:15] 1 - New client connected: 127.0.0.1
+[2025-11-24 00:59:17] 1 - Message client:PASS 23
+[2025-11-24 00:59:23] 1 - Message client:USER fran * * :jopse
+[2025-11-24 00:59:26] 1 - Message client:NICK p1
+[2025-11-24 00:59:49] 2 - New client connected: 127.0.0.1
+[2025-11-24 00:59:49] 2 - Message client:PASS 23
+[2025-11-24 00:59:50] 2 - Message client:NICK Cliente1
+[2025-11-24 00:59:51] 2 - Message client:USER Cliente1 0 * :Cliente1
+[2025-11-24 00:59:52] Cliente1!Cliente1@host - Message client:JOIN #roma
+[2025-11-24 00:59:53] Cliente1!Cliente1@host - Message client:JOIN #madrid
+[2025-11-24 01:00:27] p1!fran@host - Message client:FILE Cliente1 log.txt 243
+[2025-11-24 01:00:37] p1!fran@host - Client disconected
+[2025-11-24 01:00:45] Cliente1!Cliente1@host - Client disconected
+[2025-11-24 01:01:09] 1 - New client connected: 127.0.0.1
+[2025-11-24 01:01:11] 2 - New client connected: 127.0.0.1
+[2025-11-24 01:01:11] 2 - Message client:PASS 23
+[2025-11-24 01:01:12] 2 - Message client:NICK Cliente1
+[2025-11-24 01:01:13] 2 - Message client:USER Cliente1 0 * :Cliente1
+[2025-11-24 01:01:14] Cliente1!Cliente1@host - Message client:JOIN #roma
+[2025-11-24 01:01:15] 1 - Message client:PASS 23
+[2025-11-24 01:01:15] Cliente1!Cliente1@host - Message client:JOIN #madrid
+[2025-11-24 01:01:18] 1 - Message client:NICK pedro
+[2025-11-24 01:01:24] 1 - Message client:USER Fran jk kl :JKL
+[2025-11-24 01:01:34] pedro!Fran@host - Message client:FILE Cliente1 notas 323
+[2025-11-24 01:01:52] 3 - New client connected: 127.0.0.1
+[2025-11-24 01:01:52] 3 - Message client:PASS 23
+[2025-11-24 01:01:53] 3 - Message client:NICK Cliente1
+[2025-11-24 01:01:54] 3 - Message client:USER Cliente1 0 * :Cliente1
+[2025-11-24 01:01:55] 3 - Message client:JOIN #roma
+[2025-11-24 01:01:56] 3 - Message client:JOIN #madrid
+[2025-11-24 01:07:28] 1 - New client connected: 127.0.0.1
+[2025-11-24 01:07:28] 1 - Message client:PASS 23
+[2025-11-24 01:07:29] 1 - Message client:NICK Cliente1
+[2025-11-24 01:07:30] 1 - Message client:USER Cliente1 0 * :Cliente1
+[2025-11-24 01:07:31] Cliente1!Cliente1@host - Message client:JOIN #roma
+[2025-11-24 01:07:32] Cliente1!Cliente1@host - Message client:JOIN #madrid
+[2025-11-24 01:07:50] 2 - New client connected: 127.0.0.1
+[2025-11-24 01:07:50] 2 - Message client:PASS 23
+[2025-11-24 01:07:51] 2 - Message client:NICK alice
+[2025-11-24 01:07:51] 2 - Message client:USER alice 0 * :alice
+[2025-11-24 01:07:52] alice!alice@host - Message client:FILE Cliente1 notas 692
+[2025-11-24 01:09:18] alice!alice@host - Client disconected
+[2025-11-24 01:09:22] 3 - New client connected: 127.0.0.1
+[2025-11-24 01:09:22] 3 - Message client:PASS 23
+[2025-11-24 01:09:23] 3 - Message client:NICK alice
+[2025-11-24 01:09:23] 3 - Message client:USER alice 0 * :alice
+[2025-11-24 01:09:26] alice!alice@host - Message client:FILE Cliente1 notas1 12
+[2025-11-24 01:15:54] 1 - New client connected: 127.0.0.1
+[2025-11-24 01:15:54] 1 - Message client:PASS 23
+[2025-11-24 01:15:55] 1 - Message client:NICK Cliente1
+[2025-11-24 01:15:56] 1 - Message client:USER Cliente1 0 * :Cliente1
+[2025-11-24 01:15:57] Cliente1!Cliente1@host - Message client:JOIN #roma
+[2025-11-24 01:15:58] Cliente1!Cliente1@host - Message client:JOIN #madrid
+[2025-11-24 01:16:00] 2 - New client connected: 127.0.0.1
+[2025-11-24 01:16:00] 2 - Message client:PASS 23
+[2025-11-24 01:16:01] 2 - Message client:NICK alice
+[2025-11-24 01:16:01] 2 - Message client:USER alice 0 * :alice
+[2025-11-24 01:16:02] alice!alice@host - Message client:FILE Cliente1 notas1 12
+[2025-11-24 01:17:41] Cliente1!Cliente1@host - Client disconected
+[2025-11-24 01:17:50] 1 - New client connected: 127.0.0.1
+[2025-11-24 01:17:50] 1 - Message client:PASS 23
+[2025-11-24 01:17:51] 1 - Message client:NICK Cliente1
+[2025-11-24 01:17:52] 1 - Message client:USER Cliente1 0 * :Cliente1
+[2025-11-24 01:17:53] Cliente1!Cliente1@host - Message client:JOIN #roma
+[2025-11-24 01:17:54] Cliente1!Cliente1@host - Message client:JOIN #madrid
+[2025-11-24 01:17:54] 2 - New client connected: 127.0.0.1
+[2025-11-24 01:17:54] 2 - Message client:PASS 23
+[2025-11-24 01:17:55] 2 - Message client:NICK alice
+[2025-11-24 01:17:55] 2 - Message client:USER alice 0 * :alice
+[2025-11-24 01:17:56] alice!alice@host - Message client:FILE Cliente1 notas1 12
+[2025-11-24 01:18:11] alice!alice@host - Client disconected
+[2025-11-24 01:18:13] 3 - New client connected: 127.0.0.1
+[2025-11-24 01:18:13] 3 - Message client:PASS 23
+[2025-11-24 01:18:14] 3 - Message client:NICK alice
+[2025-11-24 01:18:14] 3 - Message client:USER alice 0 * :alice
+[2025-11-24 01:18:15] alice!alice@host - Message client:FILE Cliente1 notas 804
+[2025-11-24 01:22:30] 1 - New client connected: 127.0.0.1
+[2025-11-24 01:22:31] 1 - Message client:PASS 23
+[2025-11-24 01:22:31] 1 - Message client:NICK Cliente1
+[2025-11-24 01:22:32] 1 - Message client:USER Cliente1 0 * :Cliente1
+[2025-11-24 01:22:33] Cliente1!Cliente1@host - Message client:JOIN #roma
+[2025-11-24 01:22:34] Cliente1!Cliente1@host - Message client:JOIN #madrid
+[2025-11-24 01:22:38] 2 - New client connected: 127.0.0.1
+[2025-11-24 01:22:38] 2 - Message client:PASS 23
+[2025-11-24 01:22:39] 2 - Message client:NICK alice
+[2025-11-24 01:22:39] 2 - Message client:USER alice 0 * :alice
+[2025-11-24 01:22:40] alice!alice@host - Message client:FILE Cliente1 notas 804
+[2025-11-24 01:26:10] 1 - New client connected: 127.0.0.1
+[2025-11-24 01:26:10] 1 - Message client:PASS 23
+[2025-11-24 01:26:11] 1 - Message client:NICK Cliente1
+[2025-11-24 01:26:12] 1 - Message client:USER Cliente1 0 * :Cliente1
+[2025-11-24 01:26:13] Cliente1!Cliente1@host - Message client:JOIN #roma
+[2025-11-24 01:26:14] 2 - New client connected: 127.0.0.1
+[2025-11-24 01:26:14] 2 - Message client:PASS 23
+[2025-11-24 01:26:14] Cliente1!Cliente1@host - Message client:JOIN #madrid
+[2025-11-24 01:26:15] 2 - Message client:NICK Cliente1
+[2025-11-24 01:26:16] 2 - Message client:USER Cliente1 0 * :Cliente1
+[2025-11-24 01:26:17] 2 - Message client:JOIN #roma
+[2025-11-24 01:26:18] 2 - Message client:JOIN #madrid
+[2025-11-24 01:26:23] 3 - New client connected: 127.0.0.1
+[2025-11-24 01:26:23] 3 - Message client:PASS 23
+[2025-11-24 01:26:24] 3 - Message client:NICK alice
+[2025-11-24 01:26:24] 3 - Message client:USER alice 0 * :alice
+[2025-11-24 01:26:25] alice!alice@host - Message client:FILE Cliente1 notas 804
+[2025-11-24 01:26:32] alice!alice@host - Client disconected
+[2025-11-24 01:31:33] 1 - New client connected: 127.0.0.1
+[2025-11-24 01:31:33] 1 - Message client:PASS 23
+[2025-11-24 01:31:34] 1 - Message client:NICK Cliente1
+[2025-11-24 01:31:35] 1 - Message client:USER Cliente1 0 * :Cliente1
+[2025-11-24 01:31:36] Cliente1!Cliente1@host - Message client:JOIN #roma
+[2025-11-24 01:31:37] Cliente1!Cliente1@host - Message client:JOIN #madrid
+[2025-11-24 01:31:38] 2 - New client connected: 127.0.0.1
+[2025-11-24 01:31:38] 2 - Message client:PASS 23
+[2025-11-24 01:31:39] 2 - Message client:NICK alice
+[2025-11-24 01:31:39] 2 - Message client:USER alice 0 * :alice
+[2025-11-24 01:31:40] alice!alice@host - Message client:FILE Cliente1 p.png 6604
+[2025-11-24 01:40:43] 1 - New client connected: 127.0.0.1
+[2025-11-24 01:40:45] 1 - Message client:PASS 23
+[2025-11-24 01:40:50] 1 - Message client:BOT hola
+[2025-11-24 01:40:58] 1 - Message client:USER frahj j k :hjk
+[2025-11-24 01:41:02] 1 - Message client:NICK HKLjkl
+[2025-11-24 01:41:05] HKLjkl!frahj@host - Message client:BOT 
+[2025-11-24 01:41:05] HKLjkl!frahj@host - Message client:
+[2025-11-24 01:41:09] HKLjkl!frahj@host - Message client:BOT users
+[2025-11-24 01:41:15] HKLjkl!frahj@host - Message client:BOT channels
+[2025-11-24 01:50:06] 1 - New client connected: 127.0.0.1
+[2025-11-24 01:50:06] 1 - Message client:PASS 23
+[2025-11-24 01:50:07] 1 - Message client:NICK Cliente1
+[2025-11-24 01:50:08] 1 - Message client:USER Cliente1 0 * :Cliente1
+[2025-11-24 01:50:09] Cliente1!Cliente1@host - Message client:JOIN #roma
+[2025-11-24 01:50:10] Cliente1!Cliente1@host - Message client:JOIN #madrid
+[2025-11-24 01:50:17] 2 - New client connected: 127.0.0.1
+[2025-11-24 01:50:17] 2 - Message client:PASS 23
+[2025-11-24 01:50:18] 2 - Message client:NICK alice
+[2025-11-24 01:50:18] 2 - Message client:USER alice 0 * :alice
+[2025-11-24 01:50:19] alice!alice@host - Message client:FILE Cliente1 notas 832
+[2025-11-24 01:50:41] Cliente1!Cliente1@host - Client disconected
+[2025-11-24 01:52:50] 1 - New client connected: 127.0.0.1
+[2025-11-24 01:52:50] 1 - Message client:PASS 23
+[2025-11-24 01:52:51] 1 - Message client:NICK Cliente1
+[2025-11-24 01:52:52] 1 - Message client:USER Cliente1 0 * :Cliente1
+[2025-11-24 01:52:53] Cliente1!Cliente1@host - Message client:JOIN #roma
+[2025-11-24 01:52:54] Cliente1!Cliente1@host - Message client:JOIN #madrid
+[2025-11-24 01:52:56] 2 - New client connected: 127.0.0.1
+[2025-11-24 01:52:56] 2 - Message client:PASS 23
+[2025-11-24 01:52:57] 2 - Message client:NICK alice
+[2025-11-24 01:52:57] 2 - Message client:USER alice 0 * :alice
+[2025-11-24 01:52:58] alice!alice@host - Message client:FILE Cliente1 notas 832
+[2025-11-24 01:55:44] 1 - New client connected: 127.0.0.1
+[2025-11-24 01:55:44] 1 - Message client:PASS 23
+[2025-11-24 01:55:45] 1 - Message client:NICK Cliente1
+[2025-11-24 01:55:46] 1 - Message client:USER Cliente1 0 * :Cliente1
+[2025-11-24 01:55:46] 2 - New client connected: 127.0.0.1
+[2025-11-24 01:55:46] 2 - Message client:PASS 23
+[2025-11-24 01:55:47] Cliente1!Cliente1@host - Message client:JOIN #roma
+[2025-11-24 01:55:47] 2 - Message client:NICK alice
+[2025-11-24 01:55:47] 2 - Message client:USER alice 0 * :alice
+[2025-11-24 01:55:48] Cliente1!Cliente1@host - Message client:JOIN #madrid
+[2025-11-24 01:55:48] alice!alice@host - Message client:FILE Cliente1 notas 832
+[2025-11-24 01:59:24] 1 - New client connected: 127.0.0.1
+[2025-11-24 01:59:24] 1 - Message client:PASS 23
+[2025-11-24 01:59:25] 1 - Message client:NICK Cliente1
+[2025-11-24 01:59:29] 1 - Message client:USER Cliente1 0 * :Cliente1
+[2025-11-24 01:59:29] 2 - New client connected: 127.0.0.1
+[2025-11-24 01:59:29] 2 - Message client:PASS 23
+[2025-11-24 01:59:30] Cliente1!Cliente1@host - Message client:JOIN #roma
+[2025-11-24 01:59:30] 2 - Message client:NICK alice
+[2025-11-24 01:59:30] 2 - Message client:USER alice 0 * :alice
+[2025-11-24 01:59:31] Cliente1!Cliente1@host - Message client:JOIN #madrid
+[2025-11-24 01:59:31] alice!alice@host - Message client:FILE Cliente1 notas 832
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client: bytes) a Cliente1
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:Añadir help y joke en botnc 127.0.0.0 6667
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:Pruebas \r\n
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:socat - TCP:localhost:6667
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:telnet localhost 6667
+[2025-11-24 01:59:32] alice!alice@host - Message client:Cambiar teclado a ingles hacer ^] y escribir QUIT
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:copiar y pegar PASS 45
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:printf "PASS 45\r\n" | nc localhost 6667
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:Cliente tipo sserver para \r\n o \n solo
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:Tengo que comprobar que ponga : en los mensajes
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:Cosas raras al eliminar usuarios y desconectar no limpios los canales
+[2025-11-24 01:59:32] alice!alice@host - Message client:Parece que arreglado pero seguir echando un ojo a lo de kick
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:Los mensajes de MODE nohay ningun feedback
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:Mirar codigos y mensajes de error
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:MIERDA NO HE IMPLEMENTADO EL TEMA DE LOS COMANDOS EN CACHOS Y MUCHOS JUNTOS
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:SEGUN RFC 2812 Siempre hay que responder con \r\n
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:Todo lo de bot esta mal
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:461
+[2025-11-24 01:59:32] alice!alice@host - Message client:Not enough parameters
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 01:59:32] alice!alice@host - Message client:franmore@Fran:~/MioPrivado/irc/bueno$ bash send_file.sh notas1
+[2025-11-24 01:59:32] alice!alice@host - Message client:Enviando archivo 'notas1' (12 bytes) a Cliente1
+[2025-11-24 01:59:32] alice!alice@host - Message client:
+[2025-11-24 02:00:37] 1 - New client connected: 127.0.0.1
+[2025-11-24 02:00:37] 1 - Message client:PASS 23
+[2025-11-24 02:00:38] 1 - Message client:NICK alice
+[2025-11-24 02:00:38] 1 - Message client:USER alice 0 * :alice
+[2025-11-24 02:00:39] alice!alice@host - Message client:FILE Cliente1 notas 832
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:nc 127.0.0.0 6667
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:Pruebas \r\n
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:socat - TCP:localhost:6667
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:telnet localhost 6667
+[2025-11-24 02:00:40] alice!alice@host - Message client:Cambiar teclado a ingles hacer ^] y escribir QUIT
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:copiar y pegar PASS 45
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:printf "PASS 45\r\n" | nc localhost 6667
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:Cliente tipo sserver para \r\n o \n solo
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:Tengo que comprobar que ponga : en los mensajes
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:Cosas raras al eliminar usuarios y desconectar no limpios los canales
+[2025-11-24 02:00:40] alice!alice@host - Message client:Parece que arreglado pero seguir echando un ojo a lo de kick
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:Los mensajes de MODE nohay ningun feedback
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:Mirar codigos y mensajes de error
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:MIERDA NO HE IMPLEMENTADO EL TEMA DE LOS COMANDOS EN CACHOS Y MUCHOS JUNTOS
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:SEGUN RFC 2812 Siempre hay que responder con \r\n
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:Todo lo de bot esta mal
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:461
+[2025-11-24 02:00:40] alice!alice@host - Message client:Not enough parameters
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:00:40] alice!alice@host - Message client:franmore@Fran:~/MioPrivado/irc/bueno$ bash send_file.sh notas1
+[2025-11-24 02:00:40] alice!alice@host - Message client:Enviando archivo 'notas1' (12 bytes) a Cliente1
+[2025-11-24 02:00:40] alice!alice@host - Message client:
+[2025-11-24 02:01:48] 1 - New client connected: 127.0.0.1
+[2025-11-24 02:01:48] 1 - Message client:PASS 23
+[2025-11-24 02:01:49] 1 - Message client:NICK Cliente1
+[2025-11-24 02:01:50] 1 - Message client:USER Cliente1 0 * :Cliente1
+[2025-11-24 02:01:51] Cliente1!Cliente1@host - Message client:JOIN #roma
+[2025-11-24 02:01:52] Cliente1!Cliente1@host - Message client:JOIN #madrid
+[2025-11-24 02:01:55] 2 - New client connected: 127.0.0.1
+[2025-11-24 02:01:55] 2 - Message client:PASS 23
+[2025-11-24 02:01:56] 2 - Message client:NICK alice
+[2025-11-24 02:01:56] 2 - Message client:USER alice 0 * :alice
+[2025-11-24 02:01:57] alice!alice@host - Message client:FILE Cliente1 notas1 12
+[2025-11-24 02:02:03] alice!alice@host - Client disconected
+[2025-11-24 02:02:04] 3 - New client connected: 127.0.0.1
+[2025-11-24 02:02:04] 3 - Message client:PASS 23
+[2025-11-24 02:02:05] 3 - Message client:NICK alice
+[2025-11-24 02:02:05] 3 - Message client:USER alice 0 * :alice
+[2025-11-24 02:02:06] alice!alice@host - Message client:FILE Cliente1 notas 832
+[2025-11-24 02:02:13] Cliente1!Cliente1@host - Client disconected
+[2025-11-24 02:18:08] 1 - New client connected: 127.0.0.1
+[2025-11-24 02:18:10] 1 - Message client:PASS 23
+[2025-11-24 02:18:13] 1 - Message client:BOT help
+[2025-11-24 02:18:17] 1 - Message client:USER fran
+[2025-11-24 02:18:23] 1 - Message client:USER fran jk k :fs
+[2025-11-24 02:18:26] 1 - Message client:NICK hola
+[2025-11-24 02:18:31] hola!fran@host - Message client:BOT help

@@ -10,7 +10,7 @@ class Parser
     public:
         Parser(Server &server);
 
-        void parser(Server::iteratorClient& itClient, char *buffer);
+        void parser(Server::iteratorClient& itClient, const char *buffer);
         void pass(Server::iteratorClient& itClient, const std::vector<std::string>& tokens);
         void nick(Server::iteratorClient& itClient, const std::vector<std::string>& tokens);
         void user(Server::iteratorClient& itClient, const std::vector<std::string>& tokens);
@@ -21,6 +21,8 @@ class Parser
         void kick(Server::iteratorClient& itClient, const std::vector<std::string>& tokens);
         void topic(Server::iteratorClient& itClient, const std::vector<std::string>& tokens);
         void mode(Server::iteratorClient& itClient, const std::vector<std::string>& tokens);
+        void bot(Server::iteratorClient& itClient, const std::vector<std::string>& tokens);
+        void file(Server::iteratorClient& itClient, const std::vector<std::string>& tokens);
 
 
 

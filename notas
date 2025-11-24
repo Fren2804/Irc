@@ -1,3 +1,4 @@
+
 nc 127.0.0.0 6667
 
 Pruebas \r\n
@@ -26,7 +27,23 @@ Tengo que comprobar que ponga : en los mensajes
 Cosas raras al eliminar usuarios y desconectar no limpios los canales
 Parece que arreglado pero seguir echando un ojo a lo de kick
 
-El topic lo puede ver todo el mundo?
+Los mensajes de MODE nohay ningun feedback
 
 
 Mirar codigos y mensajes de error
+
+MIERDA NO HE IMPLEMENTADO EL TEMA DE LOS COMANDOS EN CACHOS Y MUCHOS JUNTOS
+
+
+SEGUN RFC 2812 Siempre hay que responder con \r\n
+
+Todo lo de bot esta mal
+
+
+461
+Not enough parameters
+
+franmore@Fran:~/MioPrivado/irc/bueno$ bash send_file.sh notas1
+Enviando archivo 'notas1' (12 bytes) a Cliente1
+
+Añadir help y joke en bot

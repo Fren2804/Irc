@@ -26,20 +26,21 @@ class Server
         std::vector<Client*> _clients;
         std::map<std::string, Channel> _channels;
 
+        std::vector<std::string> _jokes;
+
+
+        Client * _bot;
+
         std::ofstream *_log;
 
         const int _port;
         const std::string _password;
-        int _fd_socket;
-
+        int _fdSocket;
         int _idClient;
-
         Parser *_parser;
 
         Server();
-
-        Server::iteratorClient _searchClientFd(int fd);
-
+        Server::iteratorClient _searchClientFd(int fd);        
     public:
         Server(int port, const std::string &password);
 
@@ -64,13 +65,11 @@ class Server
         void messageClientChannel(std::vector<Client*> users, Client *transmitter, const std::string& messagePartOne, const std::string& messagePartTwo);
         void messageClientQuitChannels(Client *transmitter, const std::string& message);
         void messageServerJoinChannel(std::vector<Client*> users, Client *newClient, const std::string& channelName);
-        void messageLog(int id, std::string message, char *buffer);
-        void messageOutput(int id, std::string message, char* buffer);
-        void messageLog(iteratorClient& itClient, std::string message, char *buffer);
-        void messageOutput(iteratorClient& itClient, std::string message, char* buffer);
-
-        
-
+        void messageLog(int id, const std::string& message, const char *buffer);
+        void messageOutput(int id, const std::string& message, const char* buffer);
+        void messageLog(iteratorClient& itClient, const std::string& message, const char *buffer);
+        void messageOutput(iteratorClient& itClient, const std::string& message, const char* buffer);
+        void messageBot(iteratorClient& itClient, const std::string& param);
 
         void createChannel(iteratorClient& itClient, const std::string& name);
         void joinClientChannel(iteratorClient& itClient, const std::string& name);
@@ -79,10 +78,9 @@ class Server
 
         Client* getClientByNickname(const std::string& nick);
         Client* getClientByUsername(const std::string& username);
-
         Channel* getChannelByName(const std::string& name);
 
-        
+        void setFileTransfer(Client* transmitter, Client* receiver, const std::string& filename, std::size_t size);
 
         const std::string& getPassword();
 

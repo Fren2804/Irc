@@ -6,7 +6,7 @@ std::cout << "Copy constructor of Character" << std::endl;
 std::cout << "Character assignment operator." << std::endl;
 std::cout << "Default destructor of Character" << std::endl;*/
 
-Client::Client(int fd, int id): _logged(false), _complete(false), _fd(fd), _id(id), _nickname(""), _username(""), _realName(""), _prefix(""), _connection(false)
+Client::Client(int fd, int id): _logged(false), _complete(false), _fd(fd), _id(id), _nickname(""), _username(""), _realName(""), _prefix(""), _buffer(""), _fileMode(false), _bytesPending(0), _receiver(NULL), _filename("")
 {
    
 }
@@ -15,8 +15,6 @@ void Client::buildPrefix()
 {
     _prefix = _nickname + "!" + _username + "@host";
 }
-
-
 
 void Client::setLogged(bool logged)
 {
@@ -58,9 +56,29 @@ void Client::setPrefix(const std::string& prefix)
     _prefix = prefix;
 }
 
-void Client::setConnection(bool connection)
+void Client::setBuffer(const std::string& buffer)
 {
-    _connection = connection;
+    _buffer = buffer;
+}
+
+void Client::setFileMode(bool fileMode)
+{
+    _fileMode = fileMode;
+}
+
+void Client::setBytesPending(size_t bytesPending)
+{
+    _bytesPending = bytesPending;
+}
+
+void Client::setReceiver(Client* receiver)
+{
+    _receiver = receiver;
+}
+
+void Client::setFilename(const std::string& filename)
+{
+    _filename = filename;
 }
 
 bool Client::getLogged()
@@ -103,11 +121,30 @@ const std::string& Client::getPrefix()
     return (_prefix);
 }
 
-bool Client::getConnection()
+const std::string& Client::getBuffer()
 {
-    return (_connection);
+    return (_buffer);
 }
 
+bool Client::getFileMode()
+{
+    return (_fileMode);
+}
+
+size_t Client::getBytesPending()
+{
+    return (_bytesPending);
+}
+
+Client* Client::getReceiver()
+{
+    return(_receiver);
+}
+
+const std::string& Client::getFilename()
+{
+    return(_filename);
+}
 
 Client::~Client()
 {

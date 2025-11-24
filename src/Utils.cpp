@@ -50,10 +50,14 @@ int checkArgs(int argc, const char *argv[], int *port, std::string& password)
     return (0);
 }
 
-void cleanIrc(const std::vector<pollfd> &fds)
+bool allDigit(const std::string& str)
 {
-    for (size_t i = 0; i < fds.size(); ++ i)
+    for (std::size_t i = 0; i < str.size(); i ++)
     {
-        close(fds[i].fd);
+        if (!isdigit(str[i]))
+        {
+            return (false);
+        }
     }
+    return (true);
 }

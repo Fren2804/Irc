@@ -13,10 +13,9 @@ NICK="Cliente2"
     sleep 1
     echo "JOIN #roma"
     sleep 1
-    echo "JOIN #roma"
-    sleep 4
-    echo "PART #romA :me voy"
+    echo "BOT users"
     sleep 1
-    echo "PART #roma"
+    echo "BOT channels"
     sleep 1
+    
 } | nc $SERVER $PORT

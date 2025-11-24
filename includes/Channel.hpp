@@ -55,7 +55,7 @@ class Channel
 
         void setTopic(const std::string& topic);
         void setFlag(char flag);
-        void setPassword(const std::string& topic);
+        void setPassword(const std::string& password);
         void setQuantityUsers(unsigned int quantityUsers);
         void setLimitUsers(unsigned int limitUsers);
 
