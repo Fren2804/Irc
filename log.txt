@@ -1061,3 +1061,63 @@
 [2025-11-24 02:18:23] 1 - Message client:USER fran jk k :fs
 [2025-11-24 02:18:26] 1 - Message client:NICK hola
 [2025-11-24 02:18:31] hola!fran@host - Message client:BOT help
+[2025-11-24 17:49:19] 1 - New client connected: 172.20.176.1
+[2025-11-24 17:49:20] 1 - Message client:.
+[2025-11-24 17:49:20] 1 - Message client:À
+[2025-11-24 17:49:20] 1 - Message client:
+[2025-11-24 17:49:20] 1 - Message client:
+[2025-11-24 17:49:20] 1 - Client disconected
+[2025-11-24 18:09:42] 2 - New client connected: 172.20.176.1
+[2025-11-24 18:09:42] 2 - Message client:.
+[2025-11-24 18:09:42] 2 - Message client:ù×:ntël€‚@RCŒDNG¤M ³ıköš¨ü¹$®M€1Û,Î)û¦ê—L~Ã-à
+[2025-11-24 18:09:42] 2 - Message client:À
+[2025-11-24 18:09:42] 2 - Message client:
+[2025-11-24 18:09:42] 2 - Message client:
+[2025-11-24 18:09:43] 2 - Client disconected
+[2025-11-24 18:11:44] 3 - New client connected: 172.20.176.1
+[2025-11-24 18:11:44] 3 - Message client:CAP LS 302
+[2025-11-24 18:11:44] 3 - Message client:PASS 23
+[2025-11-24 18:11:44] 3 - Message client:NICK franc
+[2025-11-24 18:11:44] 3 - Message client:USER franc 0 * :realname
+[2025-11-24 18:14:38] franc!franc@host - Message client:JOIN #nombre
+[2025-11-24 18:14:59] franc!franc@host - Message client:JOIN #nombre
+[2025-11-24 18:28:32] franc!franc@host - Message client:QUIT :Leaving
+[2025-11-24 18:28:32] franc!franc@host - Client disconected
+[2025-11-24 18:28:40] 4 - New client connected: 172.20.176.1
+[2025-11-24 18:28:40] 4 - Message client:CAP LS 302
+[2025-11-24 18:28:40] 4 - Message client:PASS 23
+[2025-11-24 18:28:40] 4 - Message client:NICK franc
+[2025-11-24 18:28:40] 4 - Message client:USER franc 0 * :realname
+[2025-11-24 18:28:56] franc!franc@host - Message client:JOIN #roma
+[2025-11-24 18:29:39] 1 - New client connected: 127.0.0.1
+[2025-11-24 18:29:42] 1 - Message client:PASS 24
+[2025-11-24 18:29:45] 2 - New client connected: 172.20.176.1
+[2025-11-24 18:29:45] 2 - Message client:CAP LS 302
+[2025-11-24 18:29:45] 2 - Message client:PASS 23
+[2025-11-24 18:29:45] 2 - Message client:NICK franc
+[2025-11-24 18:29:45] 2 - Message client:USER franc 0 * :realname
+[2025-11-24 18:30:05] franc!franc@host - Message client:JOIN #roma
+[2025-11-24 18:32:32] 1 - New client connected: 172.20.176.1
+[2025-11-24 18:32:32] 1 - Message client:CAP LS 302
+[2025-11-24 18:32:32] 1 - Message client:PASS 23
+[2025-11-24 18:32:32] 1 - Message client:NICK franc
+[2025-11-24 18:32:32] 1 - Message client:USER franc 0 * :realname
+[2025-11-24 18:32:46] franc!franc@host - Message client:JOIN #roma
+[2025-11-24 18:32:52] 2 - New client connected: 127.0.0.1
+[2025-11-24 18:32:55] 2 - Message client:PASS 23
+[2025-11-24 18:33:02] 2 - Message client:NICK fren
+[2025-11-24 18:33:08] 2 - Message client:USER fran k k :sad
+[2025-11-24 18:33:12] fren!fran@host - Message client:JOIN #roma
+[2025-11-24 18:35:14] 1 - New client connected: 172.20.176.1
+[2025-11-24 18:35:14] 1 - Message client:CAP LS 302
+[2025-11-24 18:35:14] 1 - Message client:PASS 23
+[2025-11-24 18:35:15] 1 - Message client:NICK franc
+[2025-11-24 18:35:15] 1 - Message client:USER franc 0 * :realname
+[2025-11-24 18:35:20] franc!franc@host - Message client:JOIN #roma
+[2025-11-24 18:36:34] franc!franc@host - Message client:QUIT :Leaving
+[2025-11-24 18:36:34] franc!franc@host - Client disconected
+[2025-11-24 18:37:52] 1 - New client connected: 172.20.176.1
+[2025-11-24 18:37:52] 1 - Message client:CAP LS 302
+[2025-11-24 18:37:52] 1 - Message client:PASS 23
+[2025-11-24 18:37:52] 1 - Message client:NICK franc
+[2025-11-24 18:37:52] 1 - Message client:USER franc 0 * :realname

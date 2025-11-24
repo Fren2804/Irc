@@ -229,6 +229,11 @@ void Server::waitClient(int i)
         messageLog(it, "Message client:", line.c_str());
 
         _parser->parser(it, line.c_str());
+        it = _searchClientFd(fdCliente);
+        if (it == _clients.end())
+        {
+            return ;
+        }
     }
     (*it)->setBuffer(bufferClient);
 }
