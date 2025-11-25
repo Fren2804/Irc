@@ -766,7 +766,10 @@ void Parser::mode(Server::iteratorClient& itClient, const std::vector<std::strin
 			}
 			if (flags & FLAG_L)
 			{
-				message += " " + c->getLimitUsers();
+                std::stringstream ss;
+				ss << c->getLimitUsers();
+				std::string limitUsersStr = ss.str();
+				message += " " + limitUsersStr;
 			}
 			code = "324";
 			_server.messageServerClientTopic(itClient, code, (*itClient)->getNickname(), message);
