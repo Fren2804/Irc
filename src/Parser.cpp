@@ -491,15 +491,8 @@ void Parser::privmsg(Server::iteratorClient& itClient, const std::vector<std::st
 				{
 					size = size.substr(0, size.size() - 1);
 				}
-
-				std::string messageFile = ":" + (*itClient)->getPrefix()
-    + " PRIVMSG " + tokens[1]
-    + " :\001DCC SEND "
-    + tokens[4] + " "
-    + tokens[5] + " "
-    + tokens[6] + " "
-    + size + "\001\r\n";
-
+				std::string messageFile = ":" + (*itClient)->getPrefix() + " PRIVMSG " + tokens[1]
+    			+ " :\001DCC SEND " + tokens[4] + " " + tokens[5] + " " + tokens[6] + " " + size + "\001\r\n";
 				send(cl->getFd(), messageFile.c_str(), messageFile.size(), 0);
 			}
             else
