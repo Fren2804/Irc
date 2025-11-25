@@ -219,9 +219,9 @@ void Parser::user(Server::iteratorClient& itClient, const std::vector<std::strin
     }
     else
     {
-        if (tokens[4][0] != ':')
+        if (tokens.size() > 5 && tokens[4][0] != ':')
         {
-            message = std::string("Missing : before username");
+            message = std::string("Missing : before realname");
             code = "461";
         }
         else if (tokens[4].size() < 2)
@@ -441,7 +441,7 @@ void Parser::privmsg(Server::iteratorClient& itClient, const std::vector<std::st
         message = std::string("Not enough parameters");
         code = "461";
     }
-    else if (tokens[2][0] != ':')
+    else if (tokens.size() > 3 && tokens[2][0] != ':')
     {
         message = std::string("Format message incorrect start with -> :");
         code = "412";
@@ -554,7 +554,7 @@ void Parser::kick(Server::iteratorClient& itClient, const std::vector<std::strin
         message = std::string("You have not registered");
         code = "451";
     }
-    else if (tokens.size() < 4)
+    else if (tokens.size() < 3)
     {
         message = std::string("Not enough parameters");
         code = "461";
@@ -595,7 +595,15 @@ void Parser::kick(Server::iteratorClient& itClient, const std::vector<std::strin
 				message = std::string("User is not in the channel") + tokens[2];
                 code = "441";
 			}
-            else if (tokens[3][0] != ':')
+            else if (tokens.size() == 3)
+            {
+                std::string messageEvery = (" KICK ") + tokens[1] + " " + tokens[2] + " ";
+                c->everyOneMessage((*itClient), messageEvery, _server, 1);
+                c->removeUser(&(*cKick), _server);
+				message = "KICK " + tokens[2] + " success";
+				notice = true;
+            }
+            else if (tokens.size() > 4 && tokens[3][0] != ':')
             {
                 message = std::string("Format message incorrect start with -> :");
                 code = "461";
@@ -682,7 +690,7 @@ void Parser::topic(Server::iteratorClient& itClient, const std::vector<std::stri
 			}
 			else
 			{
-				if (tokens[2][0] != ':')
+				if (tokens.size() > 3 && tokens[2][0] != ':')
 				{
 					message = std::string("Format message incorrect start with -> :");
 					code = "461";
