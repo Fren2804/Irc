@@ -17,10 +17,10 @@ void Parser::parser(Server::iteratorClient& itClient, const char *buffer)
     int position = -1;
     while (aux[i] != '\0')
     {
-        if (aux[i] < 32 || aux[i] == 127)
+        if ((aux[i] < 32 && aux[i] != 1) || aux[i] == 127)
         {
             tokens.clear();
-             _server.messageServerClient(itClient, "000", (*itClient)->getNickname(), "Characters not valid in input");
+             _server.messageServerNoticeClient(itClient, "Characters not valid in input");
             return ;
         }
         if (aux[i] != ' ')
@@ -56,7 +56,7 @@ void Parser::parser(Server::iteratorClient& itClient, const char *buffer)
         &Parser::bot};
     
     i = 0;
-    if (tokens[0] == "CAP")
+    if (tokens[0] == "CAP" || tokens[0] == "WHO")
     {
         return ;
     }
@@ -484,6 +484,18 @@ void Parser::privmsg(Server::iteratorClient& itClient, const std::vector<std::st
                 message = std::string("This nickname doesnt exist ") + tokens[1];
                 code = "401";
             }
+			else if (tokens.size() >= 7 && (tokens[2] == ":DCC" || tokens[2] == ":\001DCC") && tokens[3] == "SEND")
+			{
+				std::string size = tokens.back();
+				if (!size.empty() && size[size.size() - 1] == '\001')
+				{
+					size = size.substr(0, size.size() - 1);
+				}
+
+				std::string messageFile = ":" + (*itClient)->getPrefix() + " PRIVMSG " + tokens[1] + " :DCC SEND " + tokens[4] + " " 
+				+ tokens[5] + " " + tokens[6] + " " + size + "\r\n";
+				send(cl->getFd(), messageFile.c_str(), messageFile.size(), 0);
+			}
             else
             {
                 std::string messageUser = (" PRIVMSG ") + tokens[1];
@@ -1009,50 +1021,6 @@ void Parser::bot(Server::iteratorClient& itClient, const std::vector<std::string
     }
 
     _server.messageServerClient(itClient, code, (*itClient)->getNickname(), message);
-}
-
-void Parser::file(Server::iteratorClient& itClient, const std::vector<std::string>& tokens)
-{
-    std::string message;
-    std::string code;
-
-    if (!(*itClient)->getComplete())
-    {
-        message = std::string("You have not registered");
-        code = "451";
-    }
-    else if (tokens.size() != 4)
-    {
-        message = std::string("Not enough parameters");
-        code = "461";
-    }
-    else if ((*itClient)->getFileMode())
-    {
-        message = std::string("You are already sending a file");
-        code = "000";
-    }
-    else
-    {
-        Client *c = _server.getClientByNickname(tokens[1]);
-        if (!c)
-        {
-            message = std::string("User is not in the server ") + tokens[1];
-            code = "401";
-        }
-        else if (!allDigit(tokens[3]))
-        {
-            message = std::string("Size must be a number") + tokens[1];
-            code = "461";
-        }
-        else
-        {
-            message = std::string("Start sending file") + tokens[1];
-            code = "200";
-            _server.setFileTransfer((*itClient), c, tokens[2], static_cast<size_t>(std::atoi(tokens[3].c_str())));
-        }
-    }
-    _server.messageServerClient(itClient, code, (*itClient)->getNickname(), message);
-
 }
 
 Parser::~Parser()

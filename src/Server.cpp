@@ -192,26 +192,6 @@ void Server::waitClient(int i)
         return;
     }
 
-    if ((*it)->getFileMode())
-    {
-        size_t pending = (*it)->getBytesPending();
-        Client *receiver = (*it)->getReceiver();
-        size_t bytesToProcess = std::min((size_t)lenRecv, pending);
-        send(receiver->getFd(), buffer, bytesToProcess, 0);
-        pending -= bytesToProcess;
-        (*it)->setBytesPending(pending);
-        if (pending == 0)
-        {
-            (*it)->setFileMode(false);
-            messageServerClient(it, "200", (*it)->getNickname(), "File transfer complete");
-
-            std::string messageReceiver;
-            messageReceiver = "\n:server " + receiver->getNickname() + " :Send file " + (*it)->getFilename() + "\r\n";
-            send(receiver->getFd(), messageReceiver.c_str(), messageReceiver.size(), 0);
-        }
-        return ;
-    }
-
     std::string bufferClient = (*it)->getBuffer();
     bufferClient.append(buffer, lenRecv);
     size_t pos;
@@ -494,8 +474,7 @@ void Server::messageBot(iteratorClient& itClient, const std::string &param)
                 "\nKICK <#channel> <user> :<reason>\n\tRemove a user from a channel (requires operator privileges).\n"
                 "\nMODE <target> <mode>\n\tChange channel or user modes (depends on your implementation).\n"
                 "\nBOT <help|users|channels|joke>\n\tInteract with the built-in server bot. Examples:\n\t\tBOT help      → shows bot commands"
-                "\n\t\tBOT users     → lists online users\n\t\tBOT channels  → lists available channels\n\t\tBOT joke      → a random joke\n"
-                "\nFILE <nick> <filename> <size>\n\tStart a file transfer to another user.\n\tAfter this command, send the raw file bytes.";
+                "\n\t\tBOT users     → lists online users\n\t\tBOT channels  → lists available channels\n\t\tBOT joke      → a random joke";
     }
     else if (param == "users")
     {
@@ -573,14 +552,6 @@ Channel* Server::getChannelByName(const std::string& name)
         return (&it->second);
     }
     return (NULL);
-}
-
-void Server::setFileTransfer(Client* transmitter, Client* receiver, const std::string& filename, std::size_t size)
-{
-    transmitter->setFileMode(true);
-    transmitter->setReceiver(receiver);
-    transmitter->setFilename(filename);
-    transmitter->setBytesPending(size);
 }
 
 const std::string& Server::getPassword()

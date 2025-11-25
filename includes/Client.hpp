@@ -17,13 +17,6 @@ class Client
 
         std::string _buffer;
 
-        bool        _fileMode;
-        size_t      _bytesPending;
-        Client* _receiver;
-        std::string _filename;
-
-        bool _connection;
-
     public:
         Client(int fd, int id);
         ~Client();
@@ -39,11 +32,6 @@ class Client
         void setRealName(const std::string& realName);
         void setPrefix(const std::string& prefix);
         void setBuffer(const std::string& buffer);
-        void setFileMode(bool fileMode);
-        void setBytesPending(size_t bytesPending);
-        void setReceiver(Client* receiver);
-        void setFilename(const std::string& filename);
-        void setConnection(bool connection);
 
         bool getLogged();
         bool getComplete();
@@ -54,11 +42,6 @@ class Client
         const std::string& getRealName();
         const std::string& getPrefix();
         const std::string& getBuffer();
-        bool getFileMode();
-        size_t getBytesPending();
-        Client* getReceiver();
-        const std::string& getFilename();
-        bool getConnection();
 };
 
 #endif

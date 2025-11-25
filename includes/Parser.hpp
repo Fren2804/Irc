@@ -22,7 +22,6 @@ class Parser
         void topic(Server::iteratorClient& itClient, const std::vector<std::string>& tokens);
         void mode(Server::iteratorClient& itClient, const std::vector<std::string>& tokens);
         void bot(Server::iteratorClient& itClient, const std::vector<std::string>& tokens);
-        void file(Server::iteratorClient& itClient, const std::vector<std::string>& tokens);
 
 
 

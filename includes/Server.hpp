@@ -28,9 +28,6 @@ class Server
 
         std::vector<std::string> _jokes;
 
-
-        Client * _bot;
-
         std::ofstream *_log;
 
         const int _port;
@@ -81,8 +78,6 @@ class Server
         Client* getClientByNickname(const std::string& nick);
         Client* getClientByUsername(const std::string& username);
         Channel* getChannelByName(const std::string& name);
-
-        void setFileTransfer(Client* transmitter, Client* receiver, const std::string& filename, std::size_t size);
 
         const std::string& getPassword();
 
