@@ -22,6 +22,8 @@ class Client
         Client* _receiver;
         std::string _filename;
 
+        bool _connection;
+
     public:
         Client(int fd, int id);
         ~Client();
@@ -41,6 +43,7 @@ class Client
         void setBytesPending(size_t bytesPending);
         void setReceiver(Client* receiver);
         void setFilename(const std::string& filename);
+        void setConnection(bool connection);
 
         bool getLogged();
         bool getComplete();
@@ -55,6 +58,7 @@ class Client
         size_t getBytesPending();
         Client* getReceiver();
         const std::string& getFilename();
+        bool getConnection();
 };
 
 #endif

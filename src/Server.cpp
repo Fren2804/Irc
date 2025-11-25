@@ -265,7 +265,7 @@ void Server::closeConexion(int fdCliente)
     {
         if (it->second.findUser(*itClient))
         {
-            it->second.removeUser(*itClient);
+            it->second.removeUser(*itClient, *this);
         }
     }
     delete *itClient;
@@ -318,29 +318,6 @@ void Server::messageServerClientTopic(iteratorClient& itClient, const std::strin
     send((*itClient)->getFd(), reply.c_str(), reply.size(), 0);
 }
 
-void Server::messageServerJoinChannel(std::vector<Client*> users, Client *newClient, const std::string& channelName)
-{
-    std::string reply = (":server ");
-
-    reply = reply + "353 " + newClient->getNickname() + " = " + channelName + " :";
-
-    for (int i = users.size() - 1; i >= 0; --i)
-    {
-        reply = reply + users[i]->getNickname();
-        if (i - 1 >= 0)
-        {
-            reply = reply + " ";
-        }
-    }
-    reply = reply + "\r\n";
-    send(newClient->getFd(), reply.c_str(), reply.size(), 0);
-
-    reply = (":server ");
-    reply = reply + "366 " + newClient->getNickname() + " " + channelName + " :End of /NAMES list.";
-    reply = reply + "\r\n";
-    send(newClient->getFd(), reply.c_str(), reply.size(), 0);
-}
-
 void Server::messageClientClient(Client *receiver, Client *transmitter, const std::string& messagePartOne, const std::string& messagePartTwo)
 {
     std::string reply = (":") + transmitter->getPrefix() + messagePartOne + messagePartTwo;
@@ -360,6 +337,14 @@ void Server::messageClientChannel(std::vector<Client*> users, Client *transmitte
 {
     for (Channel::iteratorClientChannel it = users.begin(); it != users.end(); ++ it)
     {
+        messageClientClient((*it), transmitter, messagePartOne, messagePartTwo);
+    }
+}
+
+void Server::messageClientChannelWithoutTransmitter(std::vector<Client*> users, Client *transmitter, const std::string& messagePartOne, const std::string& messagePartTwo)
+{
+    for (Channel::iteratorClientChannel it = users.begin(); it != users.end(); ++ it)
+    {
         if (transmitter != (*it))
         {
             messageClientClient((*it), transmitter, messagePartOne, messagePartTwo);
@@ -374,9 +359,59 @@ void Server::messageClientQuitChannels(Client *transmitter, const std::string& m
         if(it->second.findUser(transmitter))
         {
             it->second.everyOneMessage(transmitter, message, *this, 1);
-            it->second.removeUser(transmitter);
+            it->second.removeUser(transmitter, *this);
         }
     }
+}
+
+void Server::messageServerJoinChannel(Channel* ch, std::vector<Client*> users, Client *newClient, const std::string& channelName)
+{
+    std::string reply;
+
+    reply = ":server 331 " + newClient->getNickname() + " " + ch->getName() + " :";
+    if (ch->getTopic().empty())
+    {
+        reply = reply + "No topic is set";
+    }
+    else
+    {
+        reply = reply + ch->getTopic();
+    }
+    reply = reply + "\r\n";
+    send(newClient->getFd(), reply.c_str(), reply.size(), 0);
+
+    reply = (":server ");
+    reply = reply + "353 " + newClient->getNickname() + " = " + channelName + " :";
+
+    for (int i = users.size() - 1; i >= 0; --i)
+    {
+        if (ch->findOperator(users[i]))
+        {
+            reply = reply + "@" + users[i]->getNickname();
+        }
+        else
+        {
+            reply = reply + users[i]->getNickname();
+        }
+        if (i - 1 >= 0)
+        {
+            reply = reply + " ";
+        }
+    }
+    reply = reply + "\r\n";
+    send(newClient->getFd(), reply.c_str(), reply.size(), 0);
+
+    reply = (":server ");
+    reply = reply + "366 " + newClient->getNickname() + " " + channelName + " :End of /NAMES list.";
+    reply = reply + "\r\n";
+    send(newClient->getFd(), reply.c_str(), reply.size(), 0);
+}
+
+void Server::messageServerNoticeClient(iteratorClient& itClient, const std::string& message)
+{
+    std::string reply = ":server NOTICE ";
+    reply = reply + (*itClient)->getNickname() + ": " + message + "\r\n";
+    send((*itClient)->getFd(), reply.c_str(), reply.size(), 0);
 }
 
 
@@ -448,7 +483,7 @@ void Server::messageBot(iteratorClient& itClient, const std::string &param)
 
     if (param == "help")
     {
-        reply = "!HELP\nPASS <password>\n\tAuthenticate with the server. Must be used before NICK/USER.\n"
+        reply += "!HELP\n\nPASS <password>\n\tAuthenticate with the server. Must be used before NICK/USER.\n"
                 "\nNICK <nickname>\n\tSet or change your nickname. Must be unique on the server.\n"
                 "\nUSER <username> 0 * :<realname>\n\tRegister your username and real name. Required to complete login.\n"
                 "\nJOIN <#channel>\n\tJoin or create a channel. You will start receiving messages from it.\n"
@@ -480,9 +515,9 @@ void Server::messageBot(iteratorClient& itClient, const std::string &param)
     {
         srand(time(NULL));
         int joke = rand() % 10;
-        reply = _jokes[joke];
+        reply += _jokes[joke];
     }
-    messageServerClient(itClient, "000", (*itClient)->getNickname(), reply);
+    messageServerNoticeClient(itClient, reply);
 }
 
 
@@ -491,7 +526,6 @@ void Server::createChannel(iteratorClient& itClient, const std::string& name)
     Channel c = Channel(name);
 
     c.setUser((*itClient));
-    c.setOperator((*itClient));
     _channels.insert(std::make_pair(name, c));
 }
 

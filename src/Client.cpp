@@ -6,7 +6,7 @@ std::cout << "Copy constructor of Character" << std::endl;
 std::cout << "Character assignment operator." << std::endl;
 std::cout << "Default destructor of Character" << std::endl;*/
 
-Client::Client(int fd, int id): _logged(false), _complete(false), _fd(fd), _id(id), _nickname(""), _username(""), _realName(""), _prefix(""), _buffer(""), _fileMode(false), _bytesPending(0), _receiver(NULL), _filename("")
+Client::Client(int fd, int id): _logged(false), _complete(false), _fd(fd), _id(id), _nickname(""), _username(""), _realName(""), _prefix(""), _buffer(""), _fileMode(false), _bytesPending(0), _receiver(NULL), _filename(""), _connection(false)
 {
    
 }
@@ -81,6 +81,11 @@ void Client::setFilename(const std::string& filename)
     _filename = filename;
 }
 
+void Client::setConnection(bool connection)
+{
+    _connection = connection;
+}
+
 bool Client::getLogged()
 {
     return (_logged);
@@ -144,6 +149,11 @@ Client* Client::getReceiver()
 const std::string& Client::getFilename()
 {
     return(_filename);
+}
+
+bool Client::getConnection()
+{
+    return(_connection);
 }
 
 Client::~Client()

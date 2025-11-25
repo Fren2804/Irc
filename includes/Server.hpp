@@ -63,8 +63,10 @@ class Server
         void messageClientClient(Client *receiver, Client *transmitter, const std::string& messagePartOne, const std::string& messagePartTwo);
         void messageClientJoinChannel(std::vector<Client*> users, Client *transmitter, const std::string& message, const std::string& name);
         void messageClientChannel(std::vector<Client*> users, Client *transmitter, const std::string& messagePartOne, const std::string& messagePartTwo);
+        void messageClientChannelWithoutTransmitter(std::vector<Client*> users, Client *transmitter, const std::string& messagePartOne, const std::string& messagePartTwo);
         void messageClientQuitChannels(Client *transmitter, const std::string& message);
-        void messageServerJoinChannel(std::vector<Client*> users, Client *newClient, const std::string& channelName);
+        void messageServerJoinChannel(Channel* ch, std::vector<Client*> users, Client *newClient, const std::string& channelName);
+        void messageServerNoticeClient(iteratorClient& itClient, const std::string& message);
         void messageLog(int id, const std::string& message, const char *buffer);
         void messageOutput(int id, const std::string& message, const char* buffer);
         void messageLog(iteratorClient& itClient, const std::string& message, const char *buffer);

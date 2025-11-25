@@ -47,3 +47,16 @@ franmore@Fran:~/MioPrivado/irc/bueno$ bash send_file.sh notas1
 Enviando archivo 'notas1' (12 bytes) a Cliente1
 
 Añadir help y joke en bot
+
+
+
+JOIN 
+
+:fran!fran@host JOIN :#roma
+:server 331 fran #roma :No topic is set
+:server 353 fran = #roma :fran
+:server 366 fran #roma :End of /NAMES list.
+
+
+MODE #madrid 
+:server 324 <nick> #canal <modos> [parametros]

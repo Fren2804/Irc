@@ -21,12 +21,16 @@ void Channel::everyOneMessage(Client *c, const std::string& message, Server& ser
     {
         server.messageClientChannel(_users, c, message, "");
     }
+    else if (action == 2)
+    {
+        server.messageClientChannelWithoutTransmitter(_users, c, message, "");
+    }
         
 }
 
-void Channel::clientJoinMessage(Client *c, Server& server)
+void Channel::clientJoinMessage(Channel *ch, Client *c, Server& server)
 {
-    server.messageServerJoinChannel(_users, c, this->getName());
+    server.messageServerJoinChannel(ch, _users, c, this->getName());
 }
 
 void Channel::setUser(Client *c)
@@ -44,7 +48,7 @@ void Channel::setOperator(Client *c)
     _operators.push_back(c);
 }
 
-void Channel::removeUser(Client *c)
+void Channel::removeUser(Client *c, Server& server)
 {
     removeOperator(c);
     for (iteratorClientChannel it = _users.begin(); it != _users.end(); ++ it)
@@ -59,6 +63,8 @@ void Channel::removeUser(Client *c)
     if (_operators.empty() && !_users.empty())
     {
         this->setOperator(*_users.begin());
+        std::string message = " MODE " + _name + " +o " + (*_users.begin())->getNickname();
+        server.messageClientChannel(_users, (*_users.begin()), message, "");
     }
 }
 

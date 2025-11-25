@@ -40,14 +40,14 @@ class Channel
         Channel(const std::string& name);
 
         void everyOneMessage(Client *c, const std::string& message, Server& server, int action);
-        void clientJoinMessage(Client *c, Server& server);
+        void clientJoinMessage(Channel *ch, Client *c, Server& server);
 
         void clientQuit(Client *c, const std::string& message, Server& server);
 
         void setUser(Client *c);
         void setOperator(Client *c);
 
-        void removeUser(Client *c);
+        void removeUser(Client *c, Server& server);
         void removeOperator(Client *c);
 
         bool findUser(Client *c);
