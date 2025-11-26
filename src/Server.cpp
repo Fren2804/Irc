@@ -1,5 +1,3 @@
-#include "Server.hpp"
-
 #include <unistd.h>
 #include <netinet/in.h>
 #include <fcntl.h>
@@ -7,17 +5,13 @@
 #include <poll.h>
 #include <iostream>
 #include <stdlib.h>
-
 #include <ctime>
 #include <iomanip>
-
 #include <stdio.h>
-
 #include <sstream>
 
-
 #include "Parser.hpp"
-
+#include "Server.hpp"
 
 
 Server::Server(): _port(0), _password(""), _parser(NULL)
@@ -118,17 +112,14 @@ void Server::running(int *g_running)
     
         for (size_t i = 0; i < _fds.size(); i ++)
         {
-            //Esto indica nuevo cliente
             if ((_fds[i].fd == _fdSocket) && (_fds[i].revents & POLLIN))
             {
                 newClientConnected();
             }
-            //Cliente se va, error etc.
             else if (_fds[i].revents & (POLLHUP | POLLERR | POLLNVAL))
             {
                 errorClientDisconnected(i);
             }
-            //Entrada de mensaje de cliente
             else if (_fds[i].revents & POLLIN)
             {
                 waitClient(i);

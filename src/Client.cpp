@@ -1,11 +1,5 @@
 #include "Client.hpp"
 
-/*std::cout << "Default constructor of Character" << std::endl;
-std::cout << "Constructor of Character with name" << std::endl;
-std::cout << "Copy constructor of Character" << std::endl;
-std::cout << "Character assignment operator." << std::endl;
-std::cout << "Default destructor of Character" << std::endl;*/
-
 Client::Client(int fd, int id): _logged(false), _complete(false), _fd(fd), _id(id), _nickname(""), _username(""), _realName(""), _prefix(""), _buffer("")
 {
    

@@ -1,8 +1,8 @@
-#include "Parser.hpp"
-#include "Utils.h"
-
 #include <stdlib.h>
 #include <sstream>
+
+#include "Parser.hpp"
+#include "Utils.h"
 
 Parser::Parser(Server &server): _server(server)
 {
@@ -74,7 +74,6 @@ void Parser::parser(Server::iteratorClient& itClient, const char *buffer)
         }
         i ++;
     }
-    
     if (!validCommands[i])
     {
         _server.messageServerClient(itClient, "421", (*itClient)->getNickname(), "Unknown command");
@@ -592,7 +591,7 @@ void Parser::kick(Server::iteratorClient& itClient, const std::vector<std::strin
 			}
 			else if (!c->findUser(cKick))
 			{
-				message = std::string("User is not in the channel") + tokens[2];
+				message = std::string("User is not in the channel ") + tokens[2];
                 code = "441";
 			}
             else if (tokens.size() == 3)
