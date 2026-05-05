@@ -15,6 +15,10 @@ void Parser::parser(Server::iteratorClient& itClient, const char *buffer)
     std::vector<std::string> tokens;
     std::size_t i = 0;
     int position = -1;
+    if (aux.size() <= 0)
+    {
+        return ;
+    }
     while (aux[i] != '\0')
     {
         if ((aux[i] < 32 && aux[i] != 1) || aux[i] == 127)
@@ -307,7 +311,7 @@ void Parser::join(Server::iteratorClient& itClient, const std::vector<std::strin
         }
 		else if (c->getFlag() & FLAG_I)
 		{
-			message = std::string("Flag i set, you need an invitation for ") + c->getName();
+			message = std::string("You need an invitation for ") + c->getName();
 			notice = true;
 		}
 		else if (tokens.size() > 2 && !(c->getFlag() & FLAG_K))
@@ -317,7 +321,7 @@ void Parser::join(Server::iteratorClient& itClient, const std::vector<std::strin
 		}
 		else if (tokens.size() != 3 && (c->getFlag() & FLAG_K))
 		{
-			message = std::string("Flag k set, need password");
+			message = std::string("You need password");
 			notice = true;
 		}
 		else if ((c->getFlag() & FLAG_K) && (c->getPassword() != tokens[2]))
@@ -618,7 +622,6 @@ void Parser::kick(Server::iteratorClient& itClient, const std::vector<std::strin
 						messageEvery = messageEvery + " ";
 					}
 				}
-                //_server.messageClientClient(cKick, (*itClient), messageEvery, "");
 				c->everyOneMessage((*itClient), messageEvery, _server, 1);
                 c->removeUser(&(*cKick), _server);
 				message = "KICK " + tokens[2] + " success";
@@ -666,7 +669,7 @@ void Parser::topic(Server::iteratorClient& itClient, const std::vector<std::stri
 		}
 		else if (c->getFlag() & FLAG_T && !c->findOperator(*itClient))
 		{
-			message = std::string("Flag t set, you cannot change topic because you are not a operator");
+			message = std::string("You cannot change topic because you are not a operator");
 			code = "482";
 		}
 		else
@@ -792,7 +795,7 @@ void Parser::mode(Server::iteratorClient& itClient, const std::vector<std::strin
 		{
 			if (tokens[2].size() != 2 || (tokens[2][0] != '+' && tokens[2][0] != '-'))
 			{
-				message = std::string("Incorrect flag format -> +/-(f) (+o -o)");
+				message = std::string("Incorrect flag format -> +/-(flag) (+o -o)");
 				notice = true;
 			}
 			else if (tokens[2][1] != 'i' && tokens[2][1] != 't' && tokens[2][1] != 'k' && tokens[2][1] != 'o' && tokens[2][1] != 'l')
@@ -813,8 +816,6 @@ void Parser::mode(Server::iteratorClient& itClient, const std::vector<std::strin
 					if (tokens[2][0] == '+')
 					{
 						flags |= FLAG_I;
-                        //message = std::string("Flag +i set succesfully");
-            		    //notice = true;
 						message = " MODE " + c->getName() + " +i";
 						c->everyOneMessage((*itClient), message, _server, 1);
 						message = "";
@@ -822,8 +823,6 @@ void Parser::mode(Server::iteratorClient& itClient, const std::vector<std::strin
 					else
 					{
 						flags &= ~FLAG_I;	
-                        //message = std::string("Flag -i set succesfully");
-            		    //notice = true;
 						message = " MODE " + c->getName() + " -i";
 						c->everyOneMessage((*itClient), message, _server, 1);
 						message = "";					
@@ -844,17 +843,13 @@ void Parser::mode(Server::iteratorClient& itClient, const std::vector<std::strin
 					if (tokens[2][0] == '+')
 					{
 						flags |= FLAG_T;
-                        //message = std::string("Flag +t set succesfully");
-            		    //notice = true;
 						message = " MODE " + c->getName() + " +t";
 						c->everyOneMessage((*itClient), message, _server, 1);
 						message = "";
 					}
 					else
 					{
-						flags &= ~FLAG_T;
-                        //message = std::string("Flag -t set succesfully");
-            		    //notice = true;			
+						flags &= ~FLAG_T;			
 						message = " MODE " + c->getName() + " -t";
 						c->everyOneMessage((*itClient), message, _server, 1);
 						message = "";			
@@ -876,8 +871,6 @@ void Parser::mode(Server::iteratorClient& itClient, const std::vector<std::strin
 					{
 						flags |= FLAG_K;
 						c->setPassword(tokens[3]);
-                        //message = std::string("Flag +k and password set succesfully");
-            		    //notice = true;
 						message = " MODE " + c->getName() + " +k " + tokens[3];
 						c->everyOneMessage((*itClient), message, _server, 1);
 						message = "";
@@ -894,8 +887,6 @@ void Parser::mode(Server::iteratorClient& itClient, const std::vector<std::strin
 					{
 						flags &= ~FLAG_K;
 						c->setPassword("");
-                        //message = std::string("Flag -k set succesfully");
-            		    //notice = true;
 						message = " MODE " + c->getName() + " -k";
 						c->everyOneMessage((*itClient), message, _server, 1);
 						message = "";
@@ -921,8 +912,6 @@ void Parser::mode(Server::iteratorClient& itClient, const std::vector<std::strin
 					else if (tokens[2][0] == '+')
 					{
 						c->setOperator(clientOperator);
-                        //message = std::string("Operator set succesfully");
-            		    //notice = true;
 						message = " MODE " + c->getName() + " +o " + clientOperator->getNickname();
 						c->everyOneMessage((*itClient), message, _server, 1);
 						message = "";
@@ -930,8 +919,6 @@ void Parser::mode(Server::iteratorClient& itClient, const std::vector<std::strin
 					else
 					{
 						c->removeOperator(clientOperator);
-                        //message = std::string("Operator remove succesfully");
-            		    //notice = true;
 						message = " MODE " + c->getName() + " -o " + clientOperator->getNickname();
 						c->everyOneMessage((*itClient), message, _server, 1);
 						message = "";
@@ -961,8 +948,6 @@ void Parser::mode(Server::iteratorClient& itClient, const std::vector<std::strin
 						{
 							flags |= FLAG_L;
 							c->setLimitUsers(limitUsers);
-                            //message = std::string("Flag +l and limit users set succesfully");
-            		        //notice = true;
 							std::stringstream ss;
 							ss << limitUsers;
 							std::string limitUsersStr = ss.str();
@@ -983,8 +968,6 @@ void Parser::mode(Server::iteratorClient& itClient, const std::vector<std::strin
 					{
 						flags &= ~FLAG_L;
 						c->setLimitUsers(100);
-                        //message = std::string("Flag -l set succesfully");
-            		    //notice = true;
 						message = " MODE " + c->getName() + " -l ";
 						c->everyOneMessage((*itClient), message, _server, 1);
 						message = "";

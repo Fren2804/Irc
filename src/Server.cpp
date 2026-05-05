@@ -463,7 +463,7 @@ void Server::messageBot(iteratorClient& itClient, const std::string &param)
                 "\nQUIT :<optional!message>\n\tDisconnect from the server with an optional message.\n"
                 "\nTOPIC <#channel> :<toSet!topic>\n\tSet or view the topic of a channel.\n"
                 "\nKICK <#channel> <user> :<reason>\n\tRemove a user from a channel (requires operator privileges).\n"
-                "\nMODE <target> <mode>\n\tChange channel or user modes (depends on your implementation).\n"
+                "\nMODE <target> +/-<mode> <optional!>\n\tChange channel or user modes (depends on your implementation).\n"
                 "\nBOT <help|users|channels|joke>\n\tInteract with the built-in server bot. Examples:\n\t\tBOT help      → shows bot commands"
                 "\n\t\tBOT users     → lists online users\n\t\tBOT channels  → lists available channels\n\t\tBOT joke      → a random joke";
     }
